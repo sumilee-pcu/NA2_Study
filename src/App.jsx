@@ -1,3 +1,4 @@
+const Portfolio = lazy(() => import('./Portfolio.jsx'));
 const Analytics = lazy(() => import('./Analytics.jsx'));
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { TOPICS, FAQS, TOOLS, GUIDES } from './content/learning.mjs';
@@ -13,7 +14,7 @@ const PracticalQuiz = lazy(() => import('./PracticalQuiz.jsx'));
 const PracticalLabs = lazy(() => import('./PracticalLabs.jsx'));
 const SUBJECTS = ['전체', '네트워크일반', 'TCP/IP', 'NOS', '네트워크운용기기', '실기 케이블링'];
 const TOPIC_BY_ID = Object.fromEntries(TOPICS.map(topic => [topic.id, topic]));
-const MODULE_PATHS = { learn: '/learn', written: '/written', practical: '/practical' };
+const MODULE_PATHS = { dashboard: '/learn/analytics', learn: '/learn/theory', written: '/written', practical: '/practical', review: '/learn/review', records: '/learn/history' };
 const now = () => new Date().toISOString();
 const storage = () => { try { return window.localStorage; } catch { return { getItem() { throw new Error('브라우저 저장소에 접근할 수 없습니다.'); }, setItem() { throw new Error('브라우저 저장소에 접근할 수 없습니다.'); } }; } };
 const href = path => `#${path}`;
@@ -41,7 +42,7 @@ export default function App() {
   const active = route.path.startsWith('/written') ? 'written' : route.path.startsWith('/cabling') ? 'cabling' : route.path.startsWith('/practical') ? 'practical' : 'learn';
   const isHub = active === 'learn' || active === 'practical';
   const isPractical = active === 'practical' || active === 'cabling';
-  const productArea = isPractical ? 'practical' : active;
+  const productArea = route.path === '/learn/analytics' ? 'dashboard' : route.path === '/learn/review' ? 'review' : route.path === '/learn/history' ? 'records' : isPractical ? 'practical' : active;
   const isQuestions = route.path === '/practical/questions';
   const isLabs = active === 'practical' && practicalSection(route.path) === 'lab';
   const [visited, setVisited] = useState(() => ({ written: active === 'written', cabling: active === 'cabling', questions: isQuestions, labs: isLabs }));
@@ -124,7 +125,7 @@ export default function App() {
 
   return <div className="study-root">
     <a className="hub-skip" href="#hub-content" onClick={event => { event.preventDefault(); document.getElementById(isHub ? 'hub-content' : `hub-${active}-module`)?.focus(); }}>본문으로 이동</a>
-    <header className="hub-header"><a className="hub-brand" href="#/learn"><span className="hub-brand-symbol">N<span>2</span></span><span>NA2 <b>Study</b><small>네트워크관리사 2급</small></span></a><nav className="hub-product-nav" aria-label="통합 학습 메뉴">{[['learn','이론·학습센터','book'],['written','필기 문제풀이','pen'],['practical','실기','tool']].map(([key,label,icon]) => <a key={key} href={href(MODULE_PATHS[key])} className={productArea === key ? 'hub-selected' : ''} aria-current={productArea === key ? 'page' : undefined}><Icon name={icon} size={18}/><span>{label}</span></a>)}</nav><span className="hub-edition">통합 학습판 <b>02</b></span></header>
+    <header className="hub-header"><a className="hub-brand" href="#/learn/analytics"><span className="hub-brand-symbol">N<span>2</span></span><span>NA2 <b>PCU</b><small>네트워크관리사 2급</small></span></a><nav className="hub-product-nav" aria-label="통합 학습 메뉴">{[['dashboard','학습 현황','check'],['learn','이론','book'],['written','필기','pen'],['practical','실기','tool'],['review','오답 노트','pen'],['records','학습 기록','book']].map(([key,label,icon]) => <a key={key} href={href(MODULE_PATHS[key])} className={productArea === key ? 'hub-selected' : ''} aria-current={productArea === key ? 'page' : undefined}><Icon name={icon} size={18}/><span>{label}</span></a>)}</nav><span className="hub-edition">통합 학습판 <b>02</b></span></header>
     {active === 'learn' && <nav className="hub-subnav" aria-label="학습센터 메뉴">{subNav.map(([path,label]) => <a key={path} href={href(path)} className={(path === '/learn' ? route.path === path : route.path.startsWith(path)) ? 'hub-selected' : ''}>{label}</a>)}</nav>}
     {isPractical && <nav className="hub-subnav" aria-label="실기 영역 메뉴">{PRACTICAL_NAV.map(item => <a key={item.id} href={href(item.path)} className={practicalSection(route.path) === item.id ? 'hub-selected' : ''} aria-current={practicalSection(route.path) === item.id ? 'page' : undefined}>{item.label}</a>)}</nav>}
     {warning && isHub && <div className="hub-warning" role="alert"><p>{warning}</p><button onClick={backup}>현재 기록 백업</button><button onClick={() => window.location.reload()}>새로고침</button></div>}
@@ -135,6 +136,7 @@ export default function App() {
       {!assessmentGate && active === 'practical' && !isQuestions && !isLabs && <PracticalPage path={route.path}/>}
       {visited.labs && <Suspense fallback={isLabs && !assessmentGate ? <Loading/> : null}><PracticalLabs path={route.path} visible={isLabs && !assessmentGate}/></Suspense>}
       {visited.questions && <Suspense fallback={isQuestions && !assessmentGate ? <Loading/> : null}><PracticalQuiz visible={isQuestions && !assessmentGate}/></Suspense>}
+      {['/learn/review','/learn/history'].includes(route.path) && !assessmentGate && <Suspense fallback={<Loading/>}><Portfolio key={route.path} view={route.path.endsWith('/review')?'review':'records'}/></Suspense>}
       {route.path === '/learn/analytics' && !assessmentGate && <Suspense fallback={<Loading/>}><Analytics/></Suspense>}
       {route.path === '/learn' && <>
         <section className="hub-hero"><div><span className="hub-eyebrow">NETWORK ADMINISTRATOR / LEVEL 2</span><h1>네트워크관리사 2급<br/><span>통합 학습센터</span></h1><p>핵심 개념을 이해하고, 필기 문제풀이와 실기 세 영역으로 준비하세요.<br className="hub-desktop-break"/> 학습 안내부터 오답 교정까지 한곳에서 이어집니다.</p><div className="hub-actions"><a className="hub-button primary" href="#/learn/theory">이론 학습 시작 <Icon name="arrow" size={17}/></a><a className="hub-button" href="#/learn/guide">처음 이용하시나요?</a><a className="hub-button" href="#/learn/analytics">학습 분석·통합 오답 →</a></div></div><div className="hub-path-card"><span className="hub-eyebrow">나의 학습 순서</span><ol><li><span>01</span><div><b>개념 이해</b><small>설명 · 도해 · 개념 확인</small></div><Icon name="book"/></li><li><span>02</span><div><b>문제와 실습</b><small>필기 문제풀이 · 실기 영역별 준비</small></div><Icon name="pen"/></li><li><span>03</span><div><b>오답 복습</b><small>핀별 복습 · 배열 교정 · 재확인</small></div><Icon name="check"/></li></ol><div className="hub-read-progress"><span>읽은 이론 <b>{readCount} / {TOPICS.length}</b></span><progress max={TOPICS.length} value={readCount}/><small>읽음 표시는 학습 확인용이며 평가 점수에 포함되지 않습니다.</small></div></div></section>

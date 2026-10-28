@@ -25,7 +25,7 @@ export function safeReturnPath(value) {
   return typeof value === 'string' && /^\/(?:written|cabling)(?:\/[a-zA-Z0-9_-]+)*$/.test(value) ? value : '/learn';
 }
 export function parseRoute(hash = '') {
-  const raw = hash.replace(/^#/, '') || '/learn';
+  const raw = hash.replace(/^#/, '') || '/learn/analytics';
   const [path, query = ''] = raw.split('?');
   return { path: path.replace(/\/$/, '') || '/learn', params: new URLSearchParams(query) };
 }

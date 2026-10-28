@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path('src/App.jsx');s=p.read_text(encoding='utf-8-sig')
+s="const Portfolio = lazy(() => import('./Portfolio.jsx'));\n"+s
+s=s.replace("const MODULE_PATHS = { learn: '/learn', written: '/written', practical: '/practical' };","const MODULE_PATHS = { dashboard: '/learn/analytics', learn: '/learn/theory', written: '/written', practical: '/practical', review: '/learn/review', records: '/learn/history' };")
+s=s.replace("const productArea = isPractical ? 'practical' : active;","const productArea = route.path === '/learn/analytics' ? 'dashboard' : route.path === '/learn/review' ? 'review' : route.path === '/learn/history' ? 'records' : isPractical ? 'practical' : active;")
+s=s.replace("[['learn','이론·학습센터','book'],['written','필기 문제풀이','pen'],['practical','실기','tool']]","[['dashboard','학습 현황','check'],['learn','이론','book'],['written','필기','pen'],['practical','실기','tool'],['review','오답 노트','pen'],['records','학습 기록','book']]")
+s=s.replace('href="#/learn"><span className="hub-brand-symbol"','href="#/learn/analytics"><span className="hub-brand-symbol"')
+s=s.replace('NA2 <b>Study</b>','NA2 <b>PCU</b>')
+s=s.replace("{route.path === '/learn/analytics' &&", "{['/learn/review','/learn/history'].includes(route.path) && !assessmentGate && <Suspense fallback={<Loading/>}><Portfolio key={route.path} view={route.path.endsWith('/review')?'review':'records'}/></Suspense>}\n      {route.path === '/learn/analytics' &&")
+p.write_text(s,encoding='utf-8')
+p=Path('src/learning-model.mjs');s=p.read_text(encoding='utf-8');s=s.replace("hash.replace(/^#/, '') || '/learn'","hash.replace(/^#/, '') || '/learn/analytics'");p.write_text(s,encoding='utf-8')
+p=Path('src/Analytics.jsx');s=p.read_text(encoding='utf-8-sig');s="import {extendedAnalysis} from './portfolio-model.mjs';\n"+s;s=s.replace('analyze(states,index,TOPICS,questions.questions)','extendedAnalysis(states,index,questions)');s=s.replace('나의 학습 분석','나의 학습 분석');s=s.replace('<h1>나의 학습 분석</h1>','<h1>나의 학습 분석</h1><div className="analytics-actions"><a className="hub-button" href="#/learn/theory">01 이론</a><a className="hub-button" href="#/written">02 필기</a><a className="hub-button" href="#/practical">03 실기</a></div>');s=s.replace('<h2>통합 오답 체크</h2>','<h2>통합 오답 체크</h2><a href="#/learn/review">복습 체크·오답 메모 관리 →</a>');s=s.replace("['전체','이론','필기','실기']","['전체','이론','필기','실기','케이블링','실습']");s=s.replace('전체 내보내기는 보관용이며, 가져오기는 각 영역의 지원 메뉴를 이용하세요.','학습 기록 메뉴에서 전체 기록을 가져오고 복원할 수 있습니다.');p.write_text(s,encoding='utf-8')

@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {restoreRecords,validateRecords,validateReview,extendedAnalysis} from '../src/portfolio-model.mjs';
+import {freshState} from '../src/modules/cabling/model.mjs';
+const data=JSON.parse(readFileSync(new URL('../src/content/practical-questions.json',import.meta.url)));
+const index=JSON.parse(readFileSync(new URL('../src/content/written-index.json',import.meta.url)));
+const key='na2_study_learning_v1';
+test('backup validates every module before restore',()=>{assert.throws(()=>validateRecords({unknown:{}},data,index));assert.throws(()=>validateRecords({[key]:{version:99}},data,index));assert.equal(validateRecords({[key]:{version:1,read:{},checks:{},tools:{}}},data,index)[key].version,1);});
+test('restore refuses concurrent changes',()=>{let writes=0;assert.throws(()=>restoreRecords({getItem:()=> 'changed',setItem:()=>writes++},{[key]:{}},{[key]:'old'}));assert.equal(writes,0);});
+test('quota failure rolls back already restored modules',()=>{const map=new Map([['a','old-a'],['b','old-b']]);const storage={getItem:k=>map.get(k),setItem:(k,v)=>{if(k==='b')throw Error('quota');map.set(k,v);}};assert.throws(()=>restoreRecords(storage,{a:{new:true},b:{}},{a:'old-a',b:'old-b'}));assert.equal(map.get('a'),'old-a');assert.equal(map.get('b'),'old-b');});
+test('review check is separate from graded mastery',()=>{assert.equal(validateReview({version:1,items:{x:{note:'복습',checked:true}}}).items.x.checked,true);assert.throws(()=>validateReview({version:1,items:{x:{note:'x',checked:'yes'}}}));const a=extendedAnalysis({cabling:freshState()},index,data);assert.equal(a.rows.length,5);assert.equal(a.rows.at(-1).total,8);assert.equal(a.rows[3].done,0);});
+test('restore writes only backed-up keys',()=>{const map=new Map([['a','old'],['b','preserve']]);restoreRecords({getItem:k=>map.get(k),setItem:(k,v)=>map.set(k,v)},{a:{ok:true}},{a:'old'});assert.equal(map.get('b'),'preserve');assert.equal(JSON.parse(map.get('a')).ok,true);});
