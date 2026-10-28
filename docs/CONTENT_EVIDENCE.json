@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-10-22",
+  "counts": {
+    "topics": 10,
+    "selfChecks": 20,
+    "faqs": 12,
+    "tools": 8,
+    "guides": 4,
+    "mappings": 8
+  },
+  "scope": "자체 콘텐츠 및 8개 관련 문항 연결 검수. 원문 답안키 전체 감사 아님.",
+  "sourceModuleSha256": "323da41173420f037157e7491d96af0910090b3ce6ca95564b9c0ff9f356be40",
+  "evidence": [
+    {
+      "topicId": "network-osi",
+      "questionId": "2022-01-Q18",
+      "pages": [
+        2
+      ],
+      "originalProvisionalAnswer": 3,
+      "textSha256": "8ae3e675a2223663c1f893d5c288f02b9c613bf891223706dad5eb09d76c46df",
+      "imagePath": "verification/content/2022-01-Q18.webp",
+      "imageSha256": "27ab0c283e9c14a25f81ac51e1ede684c8b40d0087cfbef8c16f3865f8c9f6e9",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "network-ethernet",
+      "questionId": "2022-01-Q22",
+      "pages": [
+        3
+      ],
+      "originalProvisionalAnswer": 3,
+      "textSha256": "92491f1257edc031bc348076cea790d2b7121140e3204f474137d7236b0d928b",
+      "imagePath": "verification/content/2022-01-Q22.webp",
+      "imageSha256": "87de3bdb188e578216e106b36f30978c409d4d57b17ba340df8412a74de9ca78",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "tcpip-subnetting",
+      "questionId": "2022-03-Q03",
+      "pages": [
+        11
+      ],
+      "originalProvisionalAnswer": 3,
+      "textSha256": "a3dc9763b5893c08877b2e9691a12d40d613cfbc5dd19d143cd3f88bdfc5bc16",
+      "imagePath": "verification/content/2022-03-Q03.webp",
+      "imageSha256": "8678ba35b2bbf5ff11c2e6cb1f40807e999e1167a54a5abbf7dcbe9564cf2304",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "tcpip-transport",
+      "questionId": "2022-03-Q07",
+      "pages": [
+        11
+      ],
+      "originalProvisionalAnswer": 3,
+      "textSha256": "690f3c4f365ddcaac38b7965d39345c1b7cc214255fc3070206b770259cdea5c",
+      "imagePath": "verification/content/2022-03-Q07.webp",
+      "imageSha256": "8299050c4f3490e4efe3e0487ba1c0f93b1a9735506c69d0bea35c541d39c3e9",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "nos-linux",
+      "questionId": "2023-01-Q34",
+      "pages": [
+        24
+      ],
+      "originalProvisionalAnswer": 1,
+      "textSha256": "6f16131e69864accf76954866cbfdf7d3b7cf669d1be6b87c40635fcfaa1cd2a",
+      "imagePath": "verification/content/2023-01-Q34.webp",
+      "imageSha256": "1f82d1fc10a95d2edceed367ea4ca2a13d065b515710b4556ce90f1f775fdbf7",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "nos-windows-services",
+      "questionId": "2022-02-Q28",
+      "pages": [
+        8
+      ],
+      "originalProvisionalAnswer": 1,
+      "textSha256": "b9b062a00cc7336f6240df1cb561d5ad7ef23d6cf6924ed5eb0f69105fb3c6ee",
+      "imagePath": "verification/content/2022-02-Q28.webp",
+      "imageSha256": "e1dc4d6d92078f0fffbcdd8acc6af68156b17c8db51a38efe33ac8eae35e477e",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "devices-switch-router",
+      "questionId": "2022-01-Q46",
+      "pages": [
+        5
+      ],
+      "originalProvisionalAnswer": 2,
+      "textSha256": "b0a75996f1f5c8f7d96d36705801e98ca2766a5abec37a3e59266f0bd1294225",
+      "imagePath": "verification/content/2022-01-Q46.webp",
+      "imageSha256": "456ad7e80ae2af35f155aed6090bb6f20785de863d5d4d811553ae5c4c43171a",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    },
+    {
+      "topicId": "devices-vlan",
+      "questionId": "2022-01-Q49",
+      "pages": [
+        5
+      ],
+      "originalProvisionalAnswer": 2,
+      "textSha256": "793d5dbeb6921120c77d4614bf6260947560dec8dab18739ffc8208ce0fe5c2a",
+      "imagePath": "verification/content/2022-01-Q49.webp",
+      "imageSha256": "7d6589b30b9db47a540700bb8efae0cb2af4d7acb9d57478847eed2af95f3d5f",
+      "visualReview": "문항 원문 이미지와 텍스트 대조 완료; 연결 적합성 검토"
+    }
+  ]
+}

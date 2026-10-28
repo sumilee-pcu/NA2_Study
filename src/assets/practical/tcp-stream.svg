@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">TCP 바이트 스트림과 응용 메시지 경계</title>
+  <desc id="desc">송신 응용이 AB와 CD를 두 묶음으로 써도 TCP의 바이트 스트림은 ABCD 순서입니다. 수신 응용은 예를 들어 A와 BCD로 나누어 읽을 수 있습니다. TCP는 응용의 쓰기와 읽기 묶음 사이의 경계를 보장하지 않습니다. TCP는 연결 지향이며 양방향 바이트 전송을 지원합니다. 추가 보안 확장을 가정하지 않은 기본 TCP 자체는 암호화와 사용자 인증을 제공하지 않습니다.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8" fill="#087a61"/></marker></defs>
+  <rect width="760" height="520" fill="#fff"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, system-ui, sans-serif" fill="#192d33">
+    <text x="32" y="47" font-size="29" font-weight="700" fill="#103b37">TCP는 바이트 순서를 전달합니다</text>
+    <text x="32" y="81" font-size="20" fill="#536b70">응용 메시지의 시작과 끝은 응용 프로토콜에서 구분합니다.</text>
+    <g text-anchor="middle" font-size="21" font-weight="700" fill="#103b37"><text x="136" y="127">송신 응용의 쓰기</text><text x="380" y="127">TCP 바이트 스트림</text><text x="624" y="127">수신 응용의 읽기 예</text></g>
+    <rect x="32" y="144" width="208" height="120" rx="8" fill="#f3f5f2" stroke="#dce4df" stroke-width="1.5"/>
+    <rect x="276" y="144" width="208" height="120" rx="8" fill="#e7f3ec" stroke="#dce4df" stroke-width="1.5"/>
+    <rect x="520" y="144" width="208" height="120" rx="8" fill="#f3f5f2" stroke="#dce4df" stroke-width="1.5"/>
+    <g stroke="#087a61" stroke-width="1.5" fill="#fff"><rect x="48" y="172" width="80" height="56" rx="4"/><rect x="144" y="172" width="80" height="56" rx="4"/><rect x="536" y="172" width="48" height="56" rx="4"/><rect x="600" y="172" width="112" height="56" rx="4"/><rect x="296" y="172" width="168" height="56" rx="4"/></g>
+    <g stroke="#dce4df" stroke-width="1.5"><path d="M338 173 V227 M380 173 V227 M422 173 V227"/></g>
+    <g font-family="Consolas, monospace" font-size="30" font-weight="700" text-anchor="middle"><text x="88" y="209">AB</text><text x="184" y="209">CD</text><text x="317" y="209">A</text><text x="359" y="209">B</text><text x="401" y="209">C</text><text x="443" y="209">D</text><text x="560" y="209">A</text><text x="656" y="209">BCD</text></g>
+    <path d="M247 202 H269 M491 202 H513" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <g font-size="18" text-anchor="middle" fill="#536b70"><text x="136" y="250">2번의 쓰기</text><text x="380" y="250">바이트 순서 ABCD</text><text x="624" y="250">묶음은 달라질 수 있음</text></g>
+    <rect x="32" y="288" width="696" height="87" rx="8" fill="#f3f5f2"/>
+    <text x="48" y="321" font-size="23" font-weight="700" fill="#103b37">AB와 CD로 써도 A와 BCD로 읽을 수 있습니다.</text>
+    <text x="48" y="355" font-size="20" fill="#536b70">TCP는 응용의 쓰기·읽기 묶음 사이의 경계를 보장하지 않습니다.</text>
+    <rect x="32" y="393" width="696" height="73" rx="8" fill="#e7f3ec"/>
+    <g font-size="26" font-weight="700" fill="#087a61" text-anchor="middle"><text x="80" y="438">A</text><text x="680" y="438">B</text></g>
+    <path d="M120 411 H640 M640 449 H120" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="380" y="438" font-size="22" font-weight="700" fill="#103b37" text-anchor="middle">연결 지향 · 양방향 바이트 전송</text>
+    <text x="380" y="503" font-size="19" fill="#536b70" text-anchor="middle">기본 TCP 자체는 암호화·사용자 인증을 제공하지 않습니다.</text>
+  </g>
+</svg>

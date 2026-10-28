@@ -1,0 +1,188 @@
+{
+  "recordedAt": "2026-10-22T13:39:53.0143309+09:00",
+  "policy": "Existing repositories and public apps remain fixed; all new work belongs to NA2-study.",
+  "repositories": [
+    {
+      "name": "NA2-com",
+      "repository": "https://github.com/sumilee-phd/NA2-com",
+      "commit": "7e0c035d8f49063ae51e5715bb5dd9062487da20",
+      "files": [
+        {
+          "path": ".github/copilot-instructions.md",
+          "sha256": "2434595ad72dee5830eaa0e04a7e144ecf90fc782a268837a26314cc8dfc42b2"
+        },
+        {
+          "path": ".github/workflows/deploy.yml",
+          "sha256": "6b1cad9130a09f2ecec3ecd1bd82ff4a43668b6a4768599c6d23a2763e8c8c0b"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "a54e38c8ba7c4b5e6a8897c47ce79f031cc73ee0fe8d115d8eb57fc057b67f07"
+        },
+        {
+          "path": ".vscode/tasks.json",
+          "sha256": "f9f48c6898c0a54d478c7e84cbac8e780a3a5798a0e004a103917b127295d66a"
+        },
+        {
+          "path": "DESIGN.md",
+          "sha256": "1dd2bcb0f37bcf45dd3d5c69870da5a7276afb3b3f6e470c577d6b2ecb68e1e4"
+        },
+        {
+          "path": "README.md",
+          "sha256": "8acc2c9f7e0ca9a9a249948c606443c62bc013081ac3b425b97fb8cc6792a0c7"
+        },
+        {
+          "path": "index.html",
+          "sha256": "9ead86c25e9424e1983f43d8eaf12926353069bc0932815c8eae3c3b20939301"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "86ffd742bd320afce0f03c7d73524c651b5d1424048a9754fbf63966d4ed74b9"
+        },
+        {
+          "path": "package.json",
+          "sha256": "096a2f82cfb5ff8c6a8712327251ab2d24d9877852c19435890688b0642f4f8a"
+        },
+        {
+          "path": "public/data/bank.json",
+          "sha256": "979ca7ba0c4ec2b45fc9e9b627cb8a2c871b7951bef1d7a426afb6bb27234ece"
+        },
+        {
+          "path": "src/App.jsx",
+          "sha256": "6cd0bb6ac29efe14b48fbeb1d5093ff1262b0a0d4484eb99abd825d7abd0beeb"
+        },
+        {
+          "path": "src/main.jsx",
+          "sha256": "328d06c527c87bffbc08353ad930fc7876cf700dad480677d28fb95d7ff0e347"
+        },
+        {
+          "path": "src/styles.css",
+          "sha256": "9ee76143ef15ae2cd106995fc87326ee86350f098ba4da59eefa1892cdad1164"
+        },
+        {
+          "path": "vite.config.ts",
+          "sha256": "71be5907c50f27b54ef741770788b4046739b5dd0f27946807542621d1ce2614"
+        }
+      ]
+    },
+    {
+      "name": "NA2-cabling",
+      "repository": "https://github.com/sumilee-phd/NA2-cabling",
+      "commit": "8036a544085cf96f52e535bda8ebd8c14c86031b",
+      "files": [
+        {
+          "path": ".github/workflows/deploy-pages.yml",
+          "sha256": "9f0efa0235df8a3e911c43746e1c908cee4ad6a46048ebd2e1b61218a82c0325"
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "e5b679a717841c32d3d299462ca83a5d9aa89bd85c5c52f6c01aefabf9c4415a"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "7d3e09f5ac0c3872efb346f51127f6a0da67359f31bfca31c8884884047661d3"
+        },
+        {
+          "path": "DESIGN.md",
+          "sha256": "54299f47c6d12fd0bf602603021d73cc93b2396f750814d9f6fda9ae42fd3615"
+        },
+        {
+          "path": "README.md",
+          "sha256": "37a895bffcd72989f674416175f0ff937f1c693b2015150669ef0edce0aa6b74"
+        },
+        {
+          "path": "app.js",
+          "sha256": "6986787c3bf0ef0ffc5d2995778906107b22fe4ecaf90410efca4324d399cbb2"
+        },
+        {
+          "path": "docs/CONTENT_REVIEW.md",
+          "sha256": "36696566b82ba91afd6c0f4aa3dbb6b745fdd9b28d16604f27d9190e3c0a23a3"
+        },
+        {
+          "path": "docs/DEPLOYMENT.md",
+          "sha256": "2708ed0eacf92ff8c4341ca880d114219f332230a50684584b86090e8ea79499"
+        },
+        {
+          "path": "docs/PRD.md",
+          "sha256": "06b4185bc0b01784f082f281e0a6147839ada67afa96962aa3c2ce5c2e9c5663"
+        },
+        {
+          "path": "docs/VERIFICATION.md",
+          "sha256": "58f726c15a2d4bfadecde95ab1ad50498dc207c6793c919f3bede149435ea766"
+        },
+        {
+          "path": "index.html",
+          "sha256": "1bd0655351b8dd488a62fd34cc7268a6df3c410226b8535d43a1e7387d1b4f1a"
+        },
+        {
+          "path": "legacy/423c729/README.md",
+          "sha256": "6969a4666d66ce270f52817fc424a83ac2e3f912ed492dcb6e367a0bb4113639"
+        },
+        {
+          "path": "legacy/423c729/app.js",
+          "sha256": "6986787c3bf0ef0ffc5d2995778906107b22fe4ecaf90410efca4324d399cbb2"
+        },
+        {
+          "path": "legacy/423c729/index.html",
+          "sha256": "9f25f619c502d5f6caf1f5bf8dddb2a534a3138467b4c5c07b00eea1738a9877"
+        },
+        {
+          "path": "legacy/423c729/manifest.json",
+          "sha256": "f2a763779d810f28c9b68a9f6c33797ec4cbb58e76607ef04a9d0b0165a64ac7"
+        },
+        {
+          "path": "legacy/423c729/styles.css",
+          "sha256": "18167a09885a76531a86b96cce979d3b9492174d2c416a626e12fb0dbc64d2ce"
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "f2a763779d810f28c9b68a9f6c33797ec4cbb58e76607ef04a9d0b0165a64ac7"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "d6f1a0a6f63aa4f2bb240a76ab4c414c1e15a4b7b1d9485b357e36e7d528b2cb"
+        },
+        {
+          "path": "package.json",
+          "sha256": "3a0af655fa249312441493adcbb3d2e558a959f7ffa23d70df5dfb9b10950f4a"
+        },
+        {
+          "path": "src/App.jsx",
+          "sha256": "17dcfdeaa8d757da731d71bd109189a5b6332b42384bc51831bdfd82be8648cf"
+        },
+        {
+          "path": "src/content.mjs",
+          "sha256": "8bdbb76a6c39bdefb8d85dab26826a54c84e7ef7321210a8466c53959a0075bd"
+        },
+        {
+          "path": "src/main.jsx",
+          "sha256": "fbdb72644884b5597736565e9170eff508e1149649cc274915b87cc627c828de"
+        },
+        {
+          "path": "src/model.mjs",
+          "sha256": "473fdf6fb9c4ada1d9b71c05a2d97792edb3108f102113414ad1db3419e76c5b"
+        },
+        {
+          "path": "src/styles.css",
+          "sha256": "05f870c4996e29b213a7ffb404dc94e558cd461ad896ac483faf6063a73fbcab"
+        },
+        {
+          "path": "styles.css",
+          "sha256": "18167a09885a76531a86b96cce979d3b9492174d2c416a626e12fb0dbc64d2ce"
+        },
+        {
+          "path": "tests/backup-size.test.mjs",
+          "sha256": "c9e7fd67c6d6a83e80eea7b9f97ae9c4c481ff50ee8000392b07070d12b218a3"
+        },
+        {
+          "path": "tests/model.test.mjs",
+          "sha256": "9ef6a44de79d8a920746282f416dc605ba22446d407399249698da3586b8f88b"
+        },
+        {
+          "path": "vite.config.js",
+          "sha256": "1d30a182caff2509ba8b23c64f7c45d35d63912a169cdff35f67e444b1df8069"
+        }
+      ]
+    }
+  ]
+}

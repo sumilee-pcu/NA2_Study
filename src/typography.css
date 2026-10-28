@@ -1,0 +1,72 @@
+/* Full-glyph, self-hosted fonts. Sources and licenses: docs/FONTS.md. */
+@font-face {
+  font-family: 'NA2 Gmarket Sans';
+  src: url('./assets/fonts/GmarketSans-Bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NA2 Paperlogy';
+  src: url('./assets/fonts/Paperlogy-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NA2 Paperlogy';
+  src: url('./assets/fonts/Paperlogy-SemiBold.woff') format('woff');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --font-body: 'NA2 Paperlogy', 'Malgun Gothic', system-ui, sans-serif;
+  --font-heading: 'NA2 Gmarket Sans', 'NA2 Paperlogy', 'Malgun Gothic', sans-serif;
+  --hub-ink: #192d33;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* Higher specificity keeps lazy-loaded module styles from restoring old fonts. */
+.study-root .written-module,
+.study-root .cabling-module {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.study-root :is(.hub-content, .written-module, .cabling-module) :is(h1, h2, h3) {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.study-root .hub-page-title p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.study-root .hub-faq-list summary > b {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.study-root .hub-faq-list p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+@media (max-width: 720px) {
+  .study-root .hub-page-title p,
+  .study-root .hub-faq-list summary > b,
+  .study-root .hub-faq-list p {
+    font-size: 14px;
+  }
+}

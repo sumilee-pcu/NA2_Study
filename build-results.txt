@@ -1,0 +1,64 @@
+vite v6.4.5 building for production...
+transforming...
+✓ 120 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                          0.65 kB │ gzip:   0.44 kB
+dist/assets/network-osi-CNp0TQAd.svg                     4.10 kB │ gzip:   1.04 kB
+dist/assets/lab-soa-BL2IpnMw.svg                         4.20 kB │ gzip:   1.11 kB
+dist/assets/network-ethernet-o9xwejQx.svg                4.21 kB │ gzip:   1.21 kB
+dist/assets/plug-BcZtVgTl.jpg                            4.22 kB
+dist/assets/lab-ipv4-DLODMgJ_.svg                        4.24 kB │ gzip:   0.99 kB
+dist/assets/cable-quality-dZse4Sch.svg                   4.37 kB │ gzip:   1.33 kB
+dist/assets/nos-windows-services-BhxE8xjG.svg            4.43 kB │ gzip:   1.34 kB
+dist/assets/router-modes-CeyaLpSo.svg                    4.50 kB │ gzip:   1.29 kB
+dist/assets/arp-icmp-BecaIdmq.svg                        4.71 kB │ gzip:   1.44 kB
+dist/assets/cabling-orientation-CEtuR-KL.svg             4.84 kB │ gzip:   1.33 kB
+dist/assets/tcpip-transport-C_uo66JC.svg                 4.97 kB │ gzip:   1.34 kB
+dist/assets/subnet-split-B5aofEo-.svg                    4.98 kB │ gzip:   1.01 kB
+dist/assets/encapsulation-BOqkCS-5.svg                   5.11 kB │ gzip:   1.17 kB
+dist/assets/ipv6-types-DfgR8YzJ.svg                      6.16 kB │ gzip:   1.38 kB
+dist/assets/cabling-wiremap-CDLSb18-.svg                 6.88 kB │ gzip:   1.53 kB
+dist/assets/subnet-18-BhcG-jx6.svg                       6.97 kB │ gzip:   1.10 kB
+dist/assets/cabling-t568-I1I801RM.svg                    8.28 kB │ gzip:   1.47 kB
+dist/assets/crimper-DjtfHWlY.jpg                         8.93 kB
+dist/assets/cable-tester-DfoRZHyv.svg                    8.95 kB │ gzip:   1.47 kB
+dist/assets/tester-DL19EXT4.jpg                         12.84 kB
+dist/assets/label-Dlfejgmq.jpg                          18.31 kB
+dist/assets/screen-router-access-1-CzR0oUCi.jpg         20.18 kB
+dist/assets/screen-windows-dns-records-1-BlwqvJpc.jpg   21.19 kB
+dist/assets/screen-router-access-2-DIuJXOtc.jpg         22.06 kB
+dist/assets/screen-router-basics-1-BK-JL77q.jpg         23.62 kB
+dist/assets/screen-windows-dhcp-1-DUivghWm.jpg          24.75 kB
+dist/assets/screen-windows-dns-records-2-EvMjvNx9.jpg   27.58 kB
+dist/assets/screen-router-route-1-CxLsckWG.jpg          28.86 kB
+dist/assets/screen-windows-dns-soa-1-CLFIH_2s.jpg       39.45 kB
+dist/assets/screen-windows-dhcp-2-F3jdAHf0.jpg          42.60 kB
+dist/assets/screen-router-interface-2-DHb1K_e7.jpg      43.33 kB
+dist/assets/screen-windows-dhcp-3-CcMfDvGA.jpg          44.81 kB
+dist/assets/screen-router-interface-1-B6f9NDi8.jpg      45.13 kB
+dist/assets/screen-windows-ipv4-1-DIUVXHYv.jpg          47.69 kB
+dist/assets/cutter-DzoyFftx.jpg                         57.76 kB
+dist/assets/screen-router-basics-2-BEtZxV17.jpg         62.59 kB
+dist/assets/cable-D-LUOST8.jpg                          75.35 kB
+dist/assets/stripper-CfJgucwQ.jpg                       78.62 kB
+dist/assets/screen-AHo3S5O4.jpg                         88.61 kB
+dist/assets/Paperlogy-SemiBold-D5OvJWLG.woff           254.07 kB
+dist/assets/Paperlogy-Regular--N1iV68R.woff            254.20 kB
+dist/assets/GmarketSans-Bold-D-6E6okZ.woff             978.29 kB
+dist/assets/Analytics-CnASyIMq.css                       2.84 kB │ gzip:   0.92 kB
+dist/assets/PracticalQuiz-DA63ZeaW.css                  10.44 kB │ gzip:   2.65 kB
+dist/assets/PracticalLabs-1k6cTCxZ.css                  13.45 kB │ gzip:   3.31 kB
+dist/assets/WrittenApp-B9mMT6bH.css                     18.25 kB │ gzip:   4.07 kB
+dist/assets/App-B-GxlLTC.css                            23.64 kB │ gzip:   4.98 kB
+dist/assets/index-xiWerkUT.css                          32.23 kB │ gzip:   6.87 kB
+dist/assets/practical-lab-model-Dyz9rmx_.js              3.15 kB │ gzip:   1.60 kB
+dist/assets/PracticalQuiz-BJOFmugK.js                   18.09 kB │ gzip:   5.64 kB
+dist/assets/PracticalLabs-Dvu_gmPt.js                   26.51 kB │ gzip:   8.88 kB
+dist/assets/model-BP9sj13h.js                           29.07 kB │ gzip:  10.53 kB
+dist/assets/WrittenApp-CXhu3jVI.js                      31.97 kB │ gzip:  10.95 kB
+dist/assets/practical-model-DeUNQRSw.js                 35.66 kB │ gzip:  11.16 kB
+dist/assets/App-UuPfioui.js                             46.36 kB │ gzip:  14.28 kB
+dist/assets/Analytics-DIIxQdUz.js                       75.65 kB │ gzip:   8.42 kB
+dist/assets/index-Isi3PXtd.js                          475.81 kB │ gzip: 143.76 kB
+✓ built in 1.67s

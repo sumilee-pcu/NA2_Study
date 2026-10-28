@@ -1,0 +1,897 @@
+{
+  "version": "0.1.0",
+  "title": "실기 단답형·단일선택·복수선택 초기 문제은행",
+  "source": {
+    "filename": "네트워크관리사실기단답형.pdf",
+    "pages": 3
+  },
+  "evidence": {
+    "GNU_CHMOD": {
+      "title": "GNU coreutils chmod(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/chmod.1.html",
+      "locator": "DESCRIPTION: file mode bits, numeric mode 4/2/1 and owner/group/other ordering",
+      "verifiedAt": "2026-10-23"
+    },
+    "GNU_CP": {
+      "title": "GNU coreutils cp(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/cp.1.html",
+      "locator": "NAME; DESCRIPTION: copy SOURCE to DEST",
+      "verifiedAt": "2026-10-23"
+    },
+    "GNU_DF": {
+      "title": "GNU coreutils df(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/df.1.html",
+      "locator": "NAME; DESCRIPTION: file system space usage, currently mounted file systems",
+      "verifiedAt": "2026-10-23"
+    },
+    "GNU_DU": {
+      "title": "GNU coreutils du(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/du.1.html",
+      "locator": "NAME; DESCRIPTION: file space usage and recursive directory totals",
+      "verifiedAt": "2026-10-23"
+    },
+    "GNU_MV": {
+      "title": "GNU coreutils mv(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/mv.1.html",
+      "locator": "NAME; DESCRIPTION: rename or move files",
+      "verifiedAt": "2026-10-23"
+    },
+    "GNU_PWD": {
+      "title": "GNU coreutils pwd(1) manual, reproduced by man7.org",
+      "url": "https://man7.org/linux/man-pages/man1/pwd.1.html",
+      "locator": "NAME; DESCRIPTION; COLOPHON identifies GNU coreutils source",
+      "verifiedAt": "2026-10-23"
+    },
+    "IANA_HTTPS": {
+      "title": "IANA Service Name and Transport Protocol Port Number Registry: https",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers?search=https",
+      "locator": "Registry row: https / 443 / tcp; Note: registration does not identify actual traffic",
+      "verifiedAt": "2026-10-23"
+    },
+    "IANA_SNMP": {
+      "title": "IANA Service Name and Transport Protocol Port Number Registry: snmp",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers?search=snmp",
+      "locator": "Registry rows: snmp / 161 / udp and snmptrap / 162 / udp",
+      "verifiedAt": "2026-10-23"
+    },
+    "IANA_SSH": {
+      "title": "IANA Service Name and Transport Protocol Port Number Registry: ssh",
+      "url": "https://www.iana.org/assignments/service-names-port-numbers?search=ssh",
+      "locator": "Registry row: ssh / 22 / tcp; Note: registration does not identify actual traffic",
+      "verifiedAt": "2026-10-23"
+    },
+    "LINUX_PASSWD": {
+      "title": "Linux man-pages passwd(5)",
+      "url": "https://man7.org/linux/man-pages/man5/passwd.5.html",
+      "locator": "DESCRIPTION: user login accounts; x field and /etc/shadow; seven colon-separated fields",
+      "verifiedAt": "2026-10-23"
+    },
+    "LINUX_SERVICES": {
+      "title": "Linux man-pages services(5)",
+      "url": "https://man7.org/linux/man-pages/man5/services.5.html",
+      "locator": "DESCRIPTION: service-name, port number and protocol mapping; /etc/services location",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC1918": {
+      "title": "RFC 1918: Address Allocation for Private Internets",
+      "url": "https://www.rfc-editor.org/rfc/rfc1918.html",
+      "locator": "§3 Private Address Space: 10/8, 172.16/12, 192.168/16",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC2131": {
+      "title": "RFC 2131: Dynamic Host Configuration Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+      "locator": "§1 Introduction (automatic, dynamic, manual allocation); §2.2 Dynamic allocation of network addresses; §3.1 Client-server interaction (DHCPOFFER)",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC2328": {
+      "title": "RFC 2328: OSPF Version 2",
+      "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+      "locator": "Abstract; §1.1 Protocol Overview; §2.2 The shortest-path tree",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC2453": {
+      "title": "RFC 2453: RIP Version 2",
+      "url": "https://www.rfc-editor.org/rfc/rfc2453.html",
+      "locator": "§3.2 Limitations (15 hops with cost 1); §3.6 Message Format (UDP 520 and metric 1-15, infinity 16)",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC4291": {
+      "title": "RFC 4291: IP Version 6 Addressing Architecture",
+      "url": "https://www.rfc-editor.org/rfc/rfc4291.html",
+      "locator": "§2 IPv6 Addressing: 128-bit identifiers; unicast, anycast, multicast; no broadcast",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC4632": {
+      "title": "RFC 4632: Classless Inter-domain Routing (CIDR)",
+      "url": "https://www.rfc-editor.org/rfc/rfc4632.html",
+      "locator": "§3.1 Basic Concept and Prefix Notation; address block table (/24, /19, /18, /16)",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC768": {
+      "title": "RFC 768: User Datagram Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+      "locator": "Introduction; Fields (Source Port and reply); User Interface (receive and send operations)",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC792": {
+      "title": "RFC 792: Internet Control Message Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc792.html",
+      "locator": "Introduction; Destination Unreachable Message; Echo or Echo Reply Message; Summary of Message Types",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC826": {
+      "title": "RFC 826: An Ethernet Address Resolution Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc826.html",
+      "locator": "Abstract and introductory purpose note: protocol/IP address to local/Ethernet address",
+      "verifiedAt": "2026-10-23"
+    },
+    "RFC9293": {
+      "title": "RFC 9293: Transmission Control Protocol (TCP)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+      "locator": "§2.2 Key TCP Concepts; §7 Security and Privacy Considerations",
+      "verifiedAt": "2026-10-23"
+    }
+  },
+  "questions": [
+    {
+      "id": "PRAC-001",
+      "type": "short",
+      "topic": "IPv4 서브넷",
+      "prompt": "IPv4 주소 192.168.0.100/24에서 /24에 대응하는 서브넷 마스크를 점으로 구분한 10진수로 쓰시오.",
+      "answer": "255.255.255.0",
+      "explanation": "/24는 왼쪽 24비트가 1이고 나머지 8비트가 0인 마스크이다. 각 옥텟을 변환하면 255.255.255.0이다.",
+      "pdfPage": 1,
+      "sourceAnchor": "왼쪽 아래: 제시된 비트로 서브넷 마스크 구하기 표의 /24 행",
+      "evidenceIds": [
+        "RFC4632"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "255.255.255.0"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-002",
+      "type": "short",
+      "topic": "IPv4 서브넷",
+      "prompt": "IPv4 주소 128.148.210.12/18의 네트워크 주소를 점으로 구분한 10진수로 쓰시오. /18 접미사는 쓰지 않는다.",
+      "answer": "128.148.192.0",
+      "explanation": "/18의 마스크는 255.255.192.0이다. 셋째 옥텟 210에 192를 비트 AND하면 192이며 호스트 비트를 0으로 만들면 128.148.192.0이다.",
+      "pdfPage": 1,
+      "sourceAnchor": "왼쪽 중간: IP와 Subnet Mask로 네트워크 아이디 구하기 예제",
+      "evidenceIds": [
+        "RFC4632"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "128.148.192.0"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-003",
+      "type": "short",
+      "topic": "IPv6 주소",
+      "prompt": "IPv6 주소의 길이는 몇 비트인가? 단위를 제외한 정수만 쓰시오.",
+      "answer": "128",
+      "explanation": "IPv6 주소는 인터페이스 또는 인터페이스 집합을 식별하는 128비트 식별자이다.",
+      "pdfPage": 1,
+      "sourceAnchor": "오른쪽 위: IPv4와 IPv6",
+      "evidenceIds": [
+        "RFC4291"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "128"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-004",
+      "type": "short",
+      "topic": "주소 해석",
+      "prompt": "같은 Ethernet 링크에 있는 IPv4 이웃의 IPv4 주소에 대응하는 MAC 주소를 알아낼 때 사용하는 프로토콜의 영문 약어를 쓰시오.",
+      "answer": "ARP",
+      "explanation": "ARP는 IPv4 주소와 링크의 Ethernet 주소를 대응시킨다. 원격 목적지에서는 다음 홉의 주소를 해석할 수 있으므로 같은 링크의 이웃이라는 조건을 명시했다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 위: ARP 설명",
+      "evidenceIds": [
+        "RFC826"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "ARP"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-005",
+      "type": "short",
+      "topic": "ICMP",
+      "prompt": "IPv4에서 데이터그램 처리 오류 등에 관한 제어 메시지를 전달하는 프로토콜의 영문 약어를 쓰시오.",
+      "answer": "ICMP",
+      "explanation": "ICMP는 IP 통신의 오류와 제어 정보를 전달한다. 오류 보고가 항상 도착하거나 IP 전달의 신뢰성이 보장된다는 뜻은 아니다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 중간: ICMP 설명과 RFC792 언급",
+      "evidenceIds": [
+        "RFC792"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "ICMP"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-006",
+      "type": "short",
+      "topic": "DHCP",
+      "prompt": "IPv4 클라이언트에 IP 주소와 설정 정보를 제공하고, 동적 할당 시 임대 기간을 둘 수 있는 프로토콜의 영문 약어를 쓰시오.",
+      "answer": "DHCP",
+      "explanation": "DHCP의 동적 할당은 제한된 기간 동안 주소를 제공한다. DHCP에는 자동 할당과 수동 할당 방식도 있으므로 모든 할당이 임시 할당인 것은 아니다.",
+      "pdfPage": 3,
+      "sourceAnchor": "왼쪽 위: DHCP 설명",
+      "evidenceIds": [
+        "RFC2131"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "DHCP"
+      ],
+      "normalization": {
+        "caseSensitive": false,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-007",
+      "type": "short",
+      "topic": "Linux 명령",
+      "prompt": "GNU/Linux에서 현재 작업 디렉터리의 경로를 출력하는 명령 이름만 소문자로 쓰시오. 옵션과 인수는 쓰지 않는다.",
+      "answer": "pwd",
+      "explanation": "pwd는 현재 작업 디렉터리의 경로를 출력한다. 논리 경로와 물리 경로의 차이는 옵션에 따라 달라질 수 있으며 이 문항은 명령 이름만 평가한다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: pwd 행",
+      "evidenceIds": [
+        "GNU_PWD"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "pwd"
+      ],
+      "normalization": {
+        "caseSensitive": true,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-008",
+      "type": "short",
+      "topic": "Linux 권한",
+      "prompt": "GNU/Linux에서 파일의 기본 접근 권한 비트를 변경하는 명령 이름만 소문자로 쓰시오. 옵션과 인수는 쓰지 않는다.",
+      "answer": "chmod",
+      "explanation": "chmod는 파일 모드 비트를 변경한다. 실제 사용할 때에는 권한값과 대상 파일 등의 인수가 필요하지만 이 문항은 명령 이름을 묻는다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: chmod 행",
+      "evidenceIds": [
+        "GNU_CHMOD"
+      ],
+      "reviewStatus": "approved",
+      "acceptedAnswers": [
+        "chmod"
+      ],
+      "normalization": {
+        "caseSensitive": true,
+        "trim": true,
+        "collapseWhitespace": true,
+        "ignoreWhitespace": false
+      }
+    },
+    {
+      "id": "PRAC-009",
+      "type": "single",
+      "topic": "IPv4 서브넷",
+      "prompt": "IPv4 /18 주소 블록 하나에 포함되는 전체 주소 수는 얼마인가? 네트워크 주소와 브로드캐스트 주소를 포함한다.",
+      "answer": [
+        "D"
+      ],
+      "explanation": "호스트 부분은 32-18=14비트이므로 전체 주소 수는 2^14=16384개이다. 셋째 옥텟의 증분 64를 전체 주소 수로 해석하면 안 된다.",
+      "pdfPage": 2,
+      "sourceAnchor": "오른쪽 중간: XXX.XXX.200.XX/18 계산 설명",
+      "evidenceIds": [
+        "RFC4632"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "64개"
+        },
+        {
+          "id": "B",
+          "text": "256개"
+        },
+        {
+          "id": "C",
+          "text": "16382개"
+        },
+        {
+          "id": "D",
+          "text": "16384개"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-010",
+      "type": "single",
+      "topic": "IPv4 서브넷",
+      "prompt": "172.16.0.0/16 전체를 겹치지 않는 동일 크기의 /19 주소 블록으로 나눈다. 모든 블록을 포함할 때 블록 수는 얼마인가?",
+      "answer": [
+        "C"
+      ],
+      "explanation": "접두 길이를 16에서 19로 3비트 늘리므로 2^(19-16)=8개 블록이다. /19 마스크만 제시하면 원래 주소 블록이 없어서 분할 개수를 정할 수 없다.",
+      "pdfPage": 2,
+      "sourceAnchor": "오른쪽 중간: 255.255.224.0의 서브넷 수 문제",
+      "evidenceIds": [
+        "RFC4632"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "4개"
+        },
+        {
+          "id": "B",
+          "text": "6개"
+        },
+        {
+          "id": "C",
+          "text": "8개"
+        },
+        {
+          "id": "D",
+          "text": "16개"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-011",
+      "type": "single",
+      "topic": "TCP",
+      "prompt": "TCP의 기본 서비스에 관한 설명으로 옳은 것을 하나 고르시오.",
+      "answer": [
+        "B"
+      ],
+      "explanation": "TCP는 연결 지향 바이트 스트림 서비스이다. 응용 메시지 경계 보존과 사용자 신원 인증은 TCP 기본 기능으로 보장되지 않는다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 아래: TCP와 UDP 비교표",
+      "evidenceIds": [
+        "RFC9293",
+        "RFC826"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "각 응용 메시지의 경계를 그대로 보존한다."
+        },
+        {
+          "id": "B",
+          "text": "신뢰성 있고 순서가 유지되는 바이트 스트림을 제공한다."
+        },
+        {
+          "id": "C",
+          "text": "모든 연결에서 사용자 암호를 의무적으로 인증한다."
+        },
+        {
+          "id": "D",
+          "text": "IP 주소를 MAC 주소로 변환한다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-012",
+      "type": "single",
+      "topic": "UDP",
+      "prompt": "UDP 자체가 보장하지 않는 특성에 관한 설명으로 옳은 것을 하나 고르시오.",
+      "answer": [
+        "A"
+      ],
+      "explanation": "UDP는 데이터그램 전달과 순서 보존을 보장하지 않는다. 송수신이나 응답 자체가 금지되는 것은 아니며, 상위 응용이 신뢰성 기능을 추가할 수도 있다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 아래: TCP와 UDP 비교표의 UDP 열",
+      "evidenceIds": [
+        "RFC768"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "데이터그램의 전달과 순서 보존을 보장하지 않는다."
+        },
+        {
+          "id": "B",
+          "text": "송신은 가능하지만 수신은 불가능하다."
+        },
+        {
+          "id": "C",
+          "text": "수신자가 응답 데이터그램을 보낼 수 없다."
+        },
+        {
+          "id": "D",
+          "text": "연결을 만들 때 반드시 사용자 암호를 인증한다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-013",
+      "type": "single",
+      "topic": "RIP",
+      "prompt": "RIPv2에서 각 링크의 비용을 1로 사용하는 일반적인 홉 수 기준으로 도달 가능한 경로의 최대 메트릭은 얼마인가?",
+      "answer": [
+        "B"
+      ],
+      "explanation": "유효한 도달 경로의 메트릭은 최대 15이며 16은 도달 불가능을 나타낸다. 링크 비용을 1로 놓는 조건을 명시했다.",
+      "pdfPage": 3,
+      "sourceAnchor": "왼쪽 중간: RIP와 최대 홉 수 제한",
+      "evidenceIds": [
+        "RFC2453"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "15"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "255"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-014",
+      "type": "single",
+      "topic": "OSPF",
+      "prompt": "OSPFv2가 사용하는 라우팅 알고리즘의 분류로 옳은 것을 하나 고르시오.",
+      "answer": [
+        "C"
+      ],
+      "explanation": "OSPFv2는 링크 상태 라우팅 프로토콜이다. 토폴로지 데이터베이스를 기반으로 최단 경로 트리를 계산한다.",
+      "pdfPage": 2,
+      "sourceAnchor": "오른쪽 아래: OSPF 설명",
+      "evidenceIds": [
+        "RFC2328"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "거리 벡터"
+        },
+        {
+          "id": "B",
+          "text": "경로 벡터"
+        },
+        {
+          "id": "C",
+          "text": "링크 상태"
+        },
+        {
+          "id": "D",
+          "text": "정적 주소 변환"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-015",
+      "type": "single",
+      "topic": "Linux 서비스 파일",
+      "prompt": "Linux의 /etc/services에 대한 설명으로 옳은 것을 하나 고르시오.",
+      "answer": [
+        "B"
+      ],
+      "explanation": "/etc/services는 서비스 이름과 포트/프로토콜 정보를 담는 텍스트 파일이다. 파일에 항목이 있다고 해서 해당 서비스가 실행 중이라는 뜻은 아니다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: /etc/services 행",
+      "evidenceIds": [
+        "LINUX_SERVICES"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "현재 실행 중인 모든 서버 프로세스를 출력하는 명령이다."
+        },
+        {
+          "id": "B",
+          "text": "서비스 이름, 포트 번호, 전송 프로토콜의 대응 정보를 담는 파일이다."
+        },
+        {
+          "id": "C",
+          "text": "사용자의 암호 해시를 저장하는 파일이다."
+        },
+        {
+          "id": "D",
+          "text": "커널의 라우팅 테이블을 수정하는 명령이다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-016",
+      "type": "single",
+      "topic": "Linux 계정 파일",
+      "prompt": "shadow password를 사용하는 일반적인 Linux 시스템에서 /etc/passwd의 주된 역할로 옳은 것을 하나 고르시오.",
+      "answer": [
+        "A"
+      ],
+      "explanation": "/etc/passwd는 로그인 계정 정보를 담는다. shadow 방식에서는 암호 필드가 x 등으로 표시되고 암호 해시는 /etc/shadow에 저장되므로 원문의 설명을 그대로 사용할 수 없다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: /etc/passwd 행",
+      "evidenceIds": [
+        "LINUX_PASSWD"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "사용자 로그인 계정의 이름, UID, GID, 홈 디렉터리, 셸 등의 정보를 제공한다."
+        },
+        {
+          "id": "B",
+          "text": "모든 사용자의 평문 암호를 저장한다."
+        },
+        {
+          "id": "C",
+          "text": "서비스별 TCP와 UDP 포트 번호를 저장한다."
+        },
+        {
+          "id": "D",
+          "text": "현재 CPU 사용률만 기록한다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-017",
+      "type": "multiple",
+      "topic": "IPv6 주소",
+      "prompt": "RFC 4291의 기본 IPv6 주소 유형을 모두 고르시오.",
+      "answer": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explanation": "IPv6의 기본 주소 유형은 유니캐스트, 애니캐스트, 멀티캐스트이다. 브로드캐스트 주소는 없으며 관련 기능은 멀티캐스트가 맡는다.",
+      "pdfPage": 1,
+      "sourceAnchor": "오른쪽 위: IPv4와 IPv6",
+      "evidenceIds": [
+        "RFC4291"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "유니캐스트"
+        },
+        {
+          "id": "B",
+          "text": "멀티캐스트"
+        },
+        {
+          "id": "C",
+          "text": "브로드캐스트"
+        },
+        {
+          "id": "D",
+          "text": "애니캐스트"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-018",
+      "type": "multiple",
+      "topic": "사설 IPv4 주소",
+      "prompt": "RFC 1918에 정의된 세 개의 사설 IPv4 주소 블록을 모두 고르시오.",
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "RFC 1918의 사설 블록은 10/8, 172.16/12, 192.168/16이다. 172로 시작하거나 192로 시작하는 모든 IPv4 주소가 사설 주소인 것은 아니다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 중간: 사설망 IP 클래스 범위",
+      "evidenceIds": [
+        "RFC1918"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "10.0.0.0/8"
+        },
+        {
+          "id": "B",
+          "text": "172.0.0.0/8"
+        },
+        {
+          "id": "C",
+          "text": "172.16.0.0/12"
+        },
+        {
+          "id": "D",
+          "text": "192.168.0.0/16"
+        },
+        {
+          "id": "E",
+          "text": "192.0.0.0/8"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-019",
+      "type": "multiple",
+      "topic": "서비스 포트",
+      "prompt": "IANA에 등록된 서비스 이름과 포트/전송 프로토콜의 조합 중 옳은 것을 모두 고르시오. 실제 서버는 별도 포트를 사용하도록 설정될 수 있다.",
+      "answer": [
+        "A",
+        "C",
+        "D"
+      ],
+      "explanation": "등록된 조합은 ssh/TCP 22, https/TCP 443, snmp/UDP 161이다. UDP 162의 등록 이름은 snmptrap이다. 등록 포트만으로 실제 트래픽의 종류를 확정할 수 없다.",
+      "pdfPage": 2,
+      "sourceAnchor": "오른쪽 중간 아래: Wellknown Port 목록",
+      "evidenceIds": [
+        "IANA_SSH",
+        "IANA_HTTPS",
+        "IANA_SNMP"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "ssh - TCP 22"
+        },
+        {
+          "id": "B",
+          "text": "https - TCP 80"
+        },
+        {
+          "id": "C",
+          "text": "https - TCP 443"
+        },
+        {
+          "id": "D",
+          "text": "snmp - UDP 161"
+        },
+        {
+          "id": "E",
+          "text": "snmp - UDP 162"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-020",
+      "type": "multiple",
+      "topic": "Linux 용량 조회",
+      "prompt": "GNU/Linux의 df와 du에 관한 설명 중 옳은 것을 모두 고르시오.",
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "df는 파일시스템 단위의 공간 정보를, du는 파일과 디렉터리의 사용량을 다룬다. 서로 다른 관점의 수치이므로 두 출력이 항상 동일한 것은 아니다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: df와 du 행",
+      "evidenceIds": [
+        "GNU_DF",
+        "GNU_DU",
+        "GNU_CHMOD"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "df는 파일시스템의 공간 사용 정보를 확인하는 데 사용한다."
+        },
+        {
+          "id": "B",
+          "text": "du는 지정 파일과 디렉터리의 공간 사용량을 집계하는 데 사용한다."
+        },
+        {
+          "id": "C",
+          "text": "df는 사용자 암호를 바꾸는 명령이다."
+        },
+        {
+          "id": "D",
+          "text": "du는 파일 권한 비트를 바꾸는 명령이다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-021",
+      "type": "multiple",
+      "topic": "Linux 기본 명령",
+      "prompt": "GNU/Linux 명령과 주된 기능의 연결 중 옳은 것을 모두 고르시오.",
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "cp는 복사, mv는 이동 또는 이름 변경, pwd는 현재 작업 디렉터리 경로 출력에 사용한다. 파일 모드 비트 변경은 chmod의 역할이다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: cp, mv, pwd, chmod 행",
+      "evidenceIds": [
+        "GNU_CP",
+        "GNU_MV",
+        "GNU_PWD",
+        "GNU_CHMOD"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "cp - 파일 복사"
+        },
+        {
+          "id": "B",
+          "text": "mv - 파일 이동 또는 이름 변경"
+        },
+        {
+          "id": "C",
+          "text": "pwd - 현재 작업 디렉터리 경로 출력"
+        },
+        {
+          "id": "D",
+          "text": "cp - 파일 접근 권한 변경"
+        }
+      ]
+    },
+    {
+      "id": "PRAC-022",
+      "type": "multiple",
+      "topic": "Linux 권한",
+      "prompt": "일반 파일의 기본 권한 비트가 755일 때, 8진수 표기 자체를 해석한 설명 중 옳은 것을 모두 고르시오. ACL 등 추가 접근 제어는 고려하지 않는다.",
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "7은 4+2+1로 읽기·쓰기·실행이며 5는 4+1로 읽기·실행이다. 세 자리는 소유자, 소유 그룹, 그 외 사용자 순서이다. 이 문항은 실제 접근 결과가 아닌 기본 비트를 해석한다.",
+      "pdfPage": 3,
+      "sourceAnchor": "리눅스 명령어 표: chmod 755 예시",
+      "evidenceIds": [
+        "GNU_CHMOD"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "소유자는 읽기, 쓰기, 실행 비트가 설정되어 있다."
+        },
+        {
+          "id": "B",
+          "text": "소유 그룹에는 읽기와 실행 비트가 설정되어 있다."
+        },
+        {
+          "id": "C",
+          "text": "그 외 사용자에게는 읽기와 실행 비트가 설정되어 있다."
+        },
+        {
+          "id": "D",
+          "text": "모든 사용자에게 쓰기 비트가 설정되어 있다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-023",
+      "type": "multiple",
+      "topic": "TCP",
+      "prompt": "추가 보안 확장을 가정하지 않는 기본 TCP에 관한 설명 중 옳은 것을 모두 고르시오.",
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "TCP는 연결 지향이며 양방향 데이터 전송을 지원한다. ACK와 연결 설정은 사용자 인증이 아니다. 기본 TCP의 신뢰성 기능과 별도의 암호화·인증 기능을 구분해야 한다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 아래: TCP와 UDP 비교표의 방향성과 인증 행",
+      "evidenceIds": [
+        "RFC9293"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "연결 지향 서비스를 제공한다."
+        },
+        {
+          "id": "B",
+          "text": "양방향 데이터 전송을 지원한다."
+        },
+        {
+          "id": "C",
+          "text": "ACK 수신만으로 상대 사용자의 신원을 인증한다."
+        },
+        {
+          "id": "D",
+          "text": "기본 TCP 자체에 모든 데이터를 암호화하는 기능이 내장되어 있다."
+        }
+      ]
+    },
+    {
+      "id": "PRAC-024",
+      "type": "multiple",
+      "topic": "ICMP",
+      "prompt": "다음 중 ICMPv4 메시지에 해당하는 것을 모두 고르시오.",
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "ICMPv4에는 Echo 요청·응답과 목적지 도달 불가 메시지가 있다. DHCP Offer는 DHCP 메시지이다. ICMP를 오류 보고 기능 하나로만 한정하지 않는다.",
+      "pdfPage": 2,
+      "sourceAnchor": "왼쪽 중간: ICMP 설명",
+      "evidenceIds": [
+        "RFC792",
+        "RFC2131"
+      ],
+      "reviewStatus": "approved",
+      "options": [
+        {
+          "id": "A",
+          "text": "Echo Request"
+        },
+        {
+          "id": "B",
+          "text": "Echo Reply"
+        },
+        {
+          "id": "C",
+          "text": "Destination Unreachable"
+        },
+        {
+          "id": "D",
+          "text": "DHCP Offer"
+        }
+      ]
+    }
+  ]
+}

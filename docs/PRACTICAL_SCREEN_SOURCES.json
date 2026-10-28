@@ -1,0 +1,146 @@
+{
+  "checkedAt": "2026-10-24",
+  "originalsUnmodified": true,
+  "screens": [
+    {
+      "id": "screen-windows-ipv4-1",
+      "file": "screen-windows-ipv4-1.jpg",
+      "labId": "windows-ipv4",
+      "sourceFile": "verification/emulator-20261023/windows/14-ipv4-values-entered.jpg",
+      "sha256": "33babdf20b859a127429b6e3574cae9e8f850d4c6d3625cf329f589f71a68002",
+      "width": 697,
+      "height": 656,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dhcp-1",
+      "file": "screen-windows-dhcp-1.jpg",
+      "labId": "windows-dhcp",
+      "sourceFile": "verification/emulator-20261023/windows/26-dhcp-len25-mask-128.jpg",
+      "sha256": "3de43d89be134693e285f357c352c34fd1d810f0c1fd0abf1e625dcb2a08c350",
+      "width": 628,
+      "height": 411,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dhcp-2",
+      "file": "screen-windows-dhcp-2.jpg",
+      "labId": "windows-dhcp",
+      "sourceFile": "verification/emulator-20261023/windows/29-dhcp-exclusion-added.jpg",
+      "sha256": "046050c67e2a0c119617c97e0ba4bf9b80d89287dc0cf62f0f5c8ec0bc9f0287",
+      "width": 838,
+      "height": 548,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dhcp-3",
+      "file": "screen-windows-dhcp-3.jpg",
+      "labId": "windows-dhcp",
+      "sourceFile": "verification/emulator-20261023/windows/31-dhcp-lease-0d-6h-0m.jpg",
+      "sha256": "c433c5d5acf71dd915eb89776f2b15f39bfd332b59821a5bb91445c93c39c214",
+      "width": 838,
+      "height": 548,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dns-records-1",
+      "file": "screen-windows-dns-records-1.jpg",
+      "labId": "windows-dns-records",
+      "sourceFile": "verification/emulator-20261023/windows/49-dns-new-host-web01.jpg",
+      "sha256": "ea6cd4c9b7f566df7db13e18beec7b6e36731393306e1b4470009b98f98d686e",
+      "width": 553,
+      "height": 435,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dns-records-2",
+      "file": "screen-windows-dns-records-2.jpg",
+      "labId": "windows-dns-records",
+      "sourceFile": "verification/emulator-20261023/windows/51-dns-cname-www.jpg",
+      "sha256": "c65faff3e3144797d258b49f19cfaa7d13421f6e0189b255de4e78433adbc166",
+      "width": 661,
+      "height": 650,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-windows-dns-soa-1",
+      "file": "screen-windows-dns-soa-1.jpg",
+      "labId": "windows-dns-soa",
+      "sourceFile": "verification/emulator-20261023/windows/65-dns-soa-reopen-values-kept.jpg",
+      "sha256": "16d9f3581e412053b5157e5998b543a247cc26ff13934d3c94d4cd1c4f85f866",
+      "width": 684,
+      "height": 642,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-basics-1",
+      "file": "screen-router-basics-1.jpg",
+      "labId": "router-basics",
+      "sourceFile": "verification/emulator-20261023/router-run1/18-r1-hostname-LAB-R1.jpg",
+      "sha256": "ba9ad03532a64fa37a1b64450270bcaa317d045ecdeae55116838c61f7b77e2a",
+      "width": 989,
+      "height": 667,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-basics-2",
+      "file": "screen-router-basics-2.jpg",
+      "labId": "router-basics",
+      "sourceFile": "verification/emulator-20261023/router-run1/28-r1-startup-p1.jpg",
+      "sha256": "8ca83311fa7e6dd897e119eb825dc23ebe06fd6c2e2e35362f85229c88ff52d0",
+      "width": 989,
+      "height": 667,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-interface-1",
+      "file": "screen-router-interface-1.jpg",
+      "labId": "router-interface",
+      "sourceFile": "verification/emulator-20261023/router-run1/19-r1-fa00-ip-noshut.jpg",
+      "sha256": "e7f74d8b968105aa8b357faa381910479c3443b54db960daba3e262c46fbc8af",
+      "width": 989,
+      "height": 667,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-interface-2",
+      "file": "screen-router-interface-2.jpg",
+      "labId": "router-interface",
+      "sourceFile": "verification/emulator-20261023/router-run1/32-r1-show-interfaces-up-protocol-down.jpg",
+      "sha256": "1b20380ea575b605d55bb81c3f872e3dd42e7a90eb4f3449f961515b21cbfbb5",
+      "width": 989,
+      "height": 667,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-route-1",
+      "file": "screen-router-route-1.jpg",
+      "labId": "router-route",
+      "sourceFile": "verification/emulator-20261023/router-run1/23-r1-running-after-p2.jpg",
+      "sha256": "ad5ccb74cb8458d6fd8e86469332753ebf1aeb1f98025ff993efc19434e1dc9b",
+      "width": 989,
+      "height": 667,
+      "capturedAt": "2026-10-23"
+    },
+    {
+      "id": "screen-router-access-1",
+      "file": "screen-router-access-1.jpg",
+      "labId": "router-access",
+      "sourceFile": "verification/emulator-20261024-auth-restart/run1/05-A-correct-password-router-user-exec.jpg",
+      "sha256": "93bbf703be241d295fded689f38e517ea38d5588b378def604d98703cc490833",
+      "width": 1112,
+      "height": 751,
+      "capturedAt": "2026-10-24"
+    },
+    {
+      "id": "screen-router-access-2",
+      "file": "screen-router-access-2.jpg",
+      "labId": "router-access",
+      "sourceFile": "verification/emulator-20261024/router-access/10-running-p3-con-vty-lines.jpg",
+      "sha256": "ea171c2e626b605f247b078ec0f77c004344d30e6c561f9c7df1cc2456adc95c",
+      "width": 1112,
+      "height": 751,
+      "capturedAt": "2026-10-24"
+    }
+  ]
+}

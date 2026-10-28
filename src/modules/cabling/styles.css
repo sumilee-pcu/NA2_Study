@@ -1,0 +1,275 @@
+.cabling-module {
+  font-family: 'Trebuchet MS', 'Malgun Gothic', sans-serif;
+  color: #192d33; background: #f3f5f2; font-synthesis: none; text-rendering: optimizeLegibility;
+  --ink: #192d33; --muted: #687779; --line: #dce4df; --green: #087a61; --mint: #a8e5c8; --navy: #103b37; --paper: #fff;
+}
+.cabling-module .theory-actions { margin-bottom: 18px; }
+.cabling-module .diagnosis-totals { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 16px 0; }
+.cabling-module .diagnosis-totals span { padding: 8px 12px; border-radius: 6px; background: #edf5f0; }
+.cabling-module .diagnosis-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.cabling-module .diagnosis-card { border: 1px solid var(--line); border-radius: 10px; padding: 16px 12px; min-width: 0; background: #fff; }
+.cabling-module .diagnosis-card.needs-review { border-color: #c98157; background: #fffaf5; }
+.cabling-module .diagnosis-card label { display: flex; align-items: center; gap: 10px; min-height: 36px; }
+.cabling-module .diagnosis-card input { width: 20px; height: 20px; accent-color: var(--green); }
+.cabling-module .diagnosis-card dl { margin: 12px 0; }
+.cabling-module .diagnosis-card dl div + div { margin-top: 10px; }
+.cabling-module .diagnosis-card dt { color: var(--muted); font-size: 12px; }
+.cabling-module .diagnosis-card dd { margin: 0; font-weight: 650; }
+.cabling-module .diagnosis-card dd span { display: inline-block; margin-left: 5px; font-weight: 400; color: var(--muted); }
+.cabling-module .diagnosis-card > small { display: block; min-height: 40px; font-size: 12px; }
+.cabling-module .diagnosis-card > button { width: 100%; margin-top: 12px; }
+.cabling-module .correction-pins { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; padding: 16px 0; }
+.cabling-module .correction-pin { min-width: 0; min-height: 112px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; padding: 12px 2px; }
+.cabling-module .correction-pin .wire-label { display: flex; flex-direction: column; font-size: 12px; gap: 8px; white-space: normal; }
+.cabling-module .correction-pin.chosen { background: #d8f3e5; border: 2px solid var(--green); box-shadow: 0 0 0 2px #a8e5c866; }
+.cabling-module .correction-status { min-height: 52px; padding: 12px 14px; background: #edf5f0; border-radius: 8px; }
+@media (max-width: 1100px) { .cabling-module .diagnosis-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .cabling-module .correction-pins { grid-template-columns: repeat(4, minmax(0, 1fr)); } .cabling-module .diagnosis-card { padding: 12px 10px; } }
+.cabling-module * { box-sizing: border-box; }
+.cabling-module { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(ellipse at 80% 0%, #e8f3ec 0, transparent 36rem), #f3f5f2; font-size: 14px; line-height: 1.6; }
+.cabling-module button, .cabling-module input, .cabling-module select { font: inherit; }
+.cabling-module button { min-height: 44px; padding: 8px 14px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 7px; font-weight: 650; cursor: pointer; transition: background .16s ease, border-color .16s ease; }
+/* Keep selected tabs and answers legible while the pointer remains on them. */
+.cabling-module button:hover:not(:disabled):where(:not(.selected):not(.chosen)) { background: #edf5f0; border-color: #b9d1c4; }
+.cabling-module button:disabled, .cabling-module fieldset:disabled button { opacity: .48; cursor: not-allowed; }
+.cabling-module button:focus-visible, .cabling-module input:focus-visible, .cabling-module summary:focus-visible, .cabling-module a:focus-visible { outline: 3px solid #54b799; outline-offset: 3px; }
+.cabling-module a { color: var(--green); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.cabling-module h1, .cabling-module h2, .cabling-module h3, .cabling-module p { margin-top: 0; }
+.cabling-module h1 { margin-bottom: 0; font-size: 25px; line-height: 1.35; font-weight: 750; }
+.cabling-module h2 { margin-bottom: 10px; font-size: 21px; line-height: 1.4; }
+.cabling-module h3 { margin: 12px 0 4px; font-size: 18px; line-height: 1.4; }
+.cabling-module p { margin-bottom: 8px; word-break: keep-all; overflow-wrap: anywhere; }
+.cabling-module small { color: var(--muted); }
+.cabling-module .shell { display: grid; grid-template-columns: 238px minmax(0, 1fr); max-width: 1540px; min-height: 100vh; margin: 0 auto; }
+.cabling-module .sidebar { position: sticky; top: 0; display: flex; height: 100vh; flex-direction: column; padding: 28px 19px 22px; color: #f4fff9; background: linear-gradient(155deg, #123b37, #102c33 74%); }
+.cabling-module .brand { display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; }
+.cabling-module .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; color: #123b37; background: #89dfb5; border-radius: 6px; }
+.cabling-module .aside-sub { margin: 8px 0 31px; color: #afc9c1; font-size: 12px; }
+.cabling-module .sidebar nav { display: grid; gap: 5px; }
+.cabling-module .nav-button { display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 12px; color: #c0d4ce; text-align: left; background: transparent; border: 0; }
+.cabling-module .nav-button svg { flex-shrink: 0; color: #90d2b6; }
+.cabling-module .nav-button small { margin-left: auto; color: #a8e5c8; }
+.cabling-module .nav-button:hover:not(:disabled), .cabling-module .nav-button.active { color: #fff; background: #28524a; }
+.cabling-module .sidebar-note { margin-top: auto; padding: 16px 12px 0; color: #afc9c1; border-top: 1px solid #31514b; font-size: 12px; }
+.cabling-module .sidebar-note strong { color: #9ae4bd; }
+.cabling-module .sidebar-note p { margin: 7px 0; }
+.cabling-module .series-link { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-top: 16px; padding: 10px 12px; color: #c2e9d7; background: #ffffff08; border: 1px solid #42685d; border-radius: 7px; font-size: 12px; font-weight: 700; text-decoration: none; }
+.cabling-module .series-link svg { flex-shrink: 0; }
+.cabling-module .series-link:hover { color: #fff; background: #28524a; border-color: #89dfb5; }
+.cabling-module .series-link:focus-visible { outline: 3px solid #77cdb1; outline-offset: 2px; }
+.cabling-module .main-content { min-width: 0; padding: 27px clamp(20px, 4vw, 54px) 40px; }
+.cabling-module .page-header { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 24px; padding-bottom: 19px; border-bottom: 1px solid var(--line); }
+.cabling-module .eyebrow { color: var(--green); font-size: 11px; font-weight: 750; letter-spacing: 1.4px; }
+.cabling-module .streak-pill, .cabling-module .year-tag { display: inline-flex; align-items: center; width: fit-content; min-height: 28px; padding: 3px 10px; color: #176b50; background: #e3f3e9; border-radius: 20px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.cabling-module .stack { display: grid; gap: 20px; }
+.cabling-module .hero { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; color: #fff; background: linear-gradient(112deg, #103b37 0%, #174740 68%, #235e4d 100%); border-radius: 8px; }
+.cabling-module .hero .eyebrow { color: #9ae4bd; }
+.cabling-module .hero h2 { margin: 8px 0; font-size: 34px; line-height: 1.3; }
+.cabling-module .hero p { margin-bottom: 20px; color: #c4d8d1; }
+.cabling-module .hero .primary { color: #103b37; background: #a8e5c8; border-color: #a8e5c8; }
+.cabling-module .hero-illustration { min-width: 180px; padding: 20px; border-left: 1px solid #ffffff38; text-align: center; color: #b9dfcb; font-size: 12px; letter-spacing: 2px; }
+.cabling-module .mini-plug { display: grid; grid-template-columns: repeat(8, 1fr); gap: 5px; height: 105px; margin-bottom: 16px; padding: 15px 10px; border: 1px solid #ffffff66; border-radius: 6px; background: #ffffff14; }
+.cabling-module .mini-plug > span { display: block; background: var(--wire); border-top: 14px solid #dcb765; border-radius: 2px; }
+.cabling-module .mini-plug > .striped { background: repeating-linear-gradient(145deg, #fff 0 6px, var(--wire) 6px 12px); }
+.cabling-module .primary { color: #fff; background: var(--green); border-color: var(--green); }
+.cabling-module .primary:hover:not(:disabled) { color: #fff; background: #06644f; border-color: #06644f; }
+.cabling-module .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.cabling-module .metric { min-width: 0; padding: 16px 18px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+.cabling-module .metric small { display: block; font-size: 12px; }
+.cabling-module .metric strong { display: block; margin: 5px 0; font-size: 27px; font-variant-numeric: tabular-nums; }
+.cabling-module .metric > span { display: block; color: var(--muted); font-size: 11px; }
+.cabling-module .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.cabling-module .section-heading h2 { margin-bottom: 4px; }
+.cabling-module .section-heading p { margin: 0; color: var(--muted); }
+.cabling-module .course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.cabling-module .course-card, .cabling-module .content-panel, .cabling-module .question-panel, .cabling-module .split-panel, .cabling-module .question-row { min-width: 0; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; }
+.cabling-module .course-card { display: flex; flex-direction: column; }
+.cabling-module .course-number { color: var(--green); font-size: 20px; font-weight: 750; }
+.cabling-module .course-card p { flex: 1; color: var(--muted); }
+.cabling-module .course-card button { width: 100%; margin-top: 16px; }
+.cabling-module .split-panel { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+.cabling-module .split-panel > button { flex-shrink: 0; }
+.cabling-module .session-banner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; background: #fff7e8; border: 1px solid #e7d8b2; border-radius: 6px; }
+.cabling-module .session-banner span { display: block; color: var(--muted); font-size: 12px; }
+.cabling-module .text-button { min-height: 40px; padding: 5px 8px; color: var(--green); background: transparent; border-color: transparent; }
+.cabling-module .tabs, .cabling-module .lesson-tabs, .cabling-module .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.cabling-module .tabs button, .cabling-module .lesson-tabs button { min-height: 40px; }
+.cabling-module .tabs .selected, .cabling-module .lesson-tabs .selected { color: white; background: var(--navy); border-color: var(--navy); }
+.cabling-module .training-choices { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.cabling-module .lesson-tabs { gap: 8px; }
+.cabling-module .connector-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 24px 0 8px; }
+.cabling-module .single-connector { width: min(100%, 500px); margin: 24px auto; }
+.cabling-module .connector { min-width: 0; margin: 0; text-align: center; }
+.cabling-module .connector figcaption { margin-bottom: 8px; color: var(--ink); font-size: 16px; font-weight: 700; }
+.cabling-module .connector figcaption span { display: block; color: var(--muted); font-size: 11px; font-weight: 400; }
+.cabling-module .plug-body { padding: 8px 8px 12px; border: 2px solid #a3b5ad; border-radius: 8px 8px 18px 18px; background: linear-gradient(#f8faf9, #edf3ef); }
+.cabling-module .clip-note { width: 110px; margin: 0 auto 8px; border: 1px dashed #aebfb6; color: #526a5d; font-size: 10px; }
+.cabling-module .pin-row { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; }
+.cabling-module .pin-cell { min-width: 0; padding: 4px 2px; border: 1px solid #d1ddd6; border-radius: 3px; background: #fff; }
+.cabling-module .pin-cell .contact { display: block; width: 52%; height: 20px; margin: -4px auto 3px; background: linear-gradient(90deg, #b88d3f, #e3c272, #b88d3f); border-radius: 0 0 2px 2px; }
+.cabling-module .pin-number { display: block; font-size: 13px; }
+.cabling-module .target-pin { border: 2px solid var(--green); background: #e5f5ed; }
+.cabling-module .pin-error { border: 2px solid #b34336; background: #fff3ef; }
+.cabling-module .wire-label { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; }
+.cabling-module .wire-swatch { display: inline-block; flex-shrink: 0; width: 15px; height: 32px; border: 1px solid #0004; border-radius: 3px; background: var(--wire); }
+.cabling-module .wire-swatch.striped { background: repeating-linear-gradient(140deg, #fff 0 6px, var(--wire) 6px 11px); }
+.cabling-module .wire-label.compact { display: flex; flex-direction: column; gap: 3px; font-size: 12px; white-space: nowrap; }
+.cabling-module .wire-label.compact .wire-swatch { width: 12px; height: 32px; }
+.cabling-module .wire-empty { display: block; height: 54px; color: #7b8e82; font-size: 24px; line-height: 48px; }
+.cabling-module .cable-tail { width: 36px; height: 20px; margin: 0 auto; background: #d0dcd4; border-left: 2px solid #a3b5ad; border-right: 2px solid #a3b5ad; }
+.cabling-module .orientation { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.cabling-module .wire-legend { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 16px; margin-top: 20px; background: #f6f8f6; border-radius: 6px; }
+.cabling-module .map-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.cabling-module .map-grid h3 { font-size: 16px; }
+.cabling-module .wiremap { margin: 16px 0; padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: #fafcfb; }
+.cabling-module .wiremap-head { display: flex; justify-content: space-between; gap: 10px; font-size: 12px; }
+.cabling-module .wiremap svg { display: block; width: 100%; height: auto; margin: 10px 0; }
+.cabling-module .wiremap text { fill: var(--ink); font-size: 15px; font-family: inherit; font-weight: 700; }
+.cabling-module .wiremap p { color: var(--muted); font-size: 11px; }
+.cabling-module .source-list { margin: 12px 0 0; padding-left: 18px; font-size: 12px; }
+.cabling-module .source-list li { margin-bottom: 8px; }
+.cabling-module .source-list small { display: block; }
+.cabling-module .note { padding: 12px 16px; color: #526359; background: #f3f7f4; border-left: 3px solid #9bc8b6; font-size: 13px; }
+.cabling-module .question-top { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.cabling-module .progress { height: 5px; overflow: hidden; margin: 16px 0 24px; background: #e6ece8; border-radius: 5px; }
+.cabling-module .progress span { display: block; height: 100%; background: var(--green); transition: width .25s ease; }
+.cabling-module .answer-field { border: 0; padding: 0; margin: 24px 0 16px; }
+.cabling-module .answer-types { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cabling-module .answer-types button { min-height: 60px; }
+.cabling-module .wire-palette { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.cabling-module .wire-palette button { text-align: left; padding: 10px; }
+.cabling-module button.chosen { border: 2px solid var(--green); background: #e0f2e8; color: #064d3c; }
+.cabling-module .hint { padding: 12px 16px; margin: 16px 0; background: #f5f7f4; border: 1px solid var(--line); border-radius: 6px; }
+.cabling-module summary { cursor: pointer; }
+.cabling-module .hint summary { color: var(--green); font-weight: 700; }
+.cabling-module .hint p { padding-top: 12px; }
+.cabling-module .feedback { margin-top: 24px; padding: 20px; border: 1px solid; border-radius: 6px; }
+.cabling-module .feedback.correct { background: #edf8f1; border-color: #9fcab0; }
+.cabling-module .feedback.incorrect { background: #fff5f1; border-color: #e4bca9; }
+.cabling-module .feedback.neutral { background: #f3f7f4; border-color: #c5d5cb; }
+.cabling-module .feedback strong { font-size: 18px; }
+.cabling-module .feedback p { margin-top: 8px; }
+.cabling-module .feedback .answer-text { font-weight: 700; }
+.cabling-module .question-actions { display: flex; gap: 16px; align-items: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.cabling-module .question-actions button { min-width: 128px; }
+.cabling-module .question-actions span { color: var(--muted); font-size: 12px; }
+.cabling-module .result-overview { display: flex; align-items: center; gap: 32px; margin: 24px 0; }
+.cabling-module .result-overview > strong { color: var(--green); font-size: 56px; line-height: 1; }
+.cabling-module .result-overview strong small { font-size: 20px; color: var(--green); }
+.cabling-module .result-overview p:last-child { color: var(--muted); font-size: 12px; }
+.cabling-module .result-list, .cabling-module .practical-records { margin-top: 24px; }
+.cabling-module .result-list details, .cabling-module .practical-records details { padding: 16px 0; border-top: 1px solid var(--line); }
+.cabling-module .result-list summary, .cabling-module .practical-records summary { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+.cabling-module .result-list summary strong { white-space: nowrap; }
+.cabling-module .success-text { color: #08704f; }
+.cabling-module .error-text, .cabling-module .danger-text { color: #ae382f; }
+.cabling-module .question-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.cabling-module .question-row h3 { margin: 4px 0 0; font-size: 16px; }
+.cabling-module .question-row button { flex-shrink: 0; }
+.cabling-module .empty-state { padding: 56px 20px; text-align: center; background: #fff; border: 1px dashed #c8d7cc; border-radius: 7px; }
+.cabling-module .empty-state svg { width: 36px; height: 36px; color: var(--green); margin-bottom: 16px; }
+.cabling-module .empty-state h2 { font-size: 19px; }
+.cabling-module .empty-state p, .cabling-module .empty-copy { color: var(--muted); }
+.cabling-module .timer { margin: 24px auto 0; color: var(--navy); font-size: clamp(60px, 10vw, 88px); font-weight: 750; text-align: center; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.cabling-module .timer-warning { color: #a23c2d; }
+.cabling-module .center { text-align: center; color: var(--muted); }
+.cabling-module .center-actions { justify-content: center; }
+.cabling-module .checklist { max-width: 600px; margin: 24px auto; border: 1px solid var(--line); border-radius: 6px; }
+.cabling-module .checklist label { display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; }
+.cabling-module .checklist label + label { border-top: 1px solid var(--line); }
+.cabling-module input[type=checkbox] { width: 20px; height: 20px; flex-shrink: 0; accent-color: var(--green); }
+.cabling-module .activity-chart { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+.cabling-module .chart-day { text-align: center; font-variant-numeric: tabular-nums; }
+.cabling-module .chart-day > strong { font-size: 14px; }
+.cabling-module .chart-day > span, .cabling-module .chart-day > small { display: block; font-size: 12px; }
+.cabling-module .bar-space { height: 120px; display: flex; align-items: end; justify-content: center; margin: 8px 0; background: #f4f7f4; border-bottom: 1px solid #c7d6cc; }
+.cabling-module .bar-space span { display: block; width: min(100%, 38px); background: #4d9c7a; border-radius: 3px 3px 0 0; }
+.cabling-module .kind-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.cabling-module .history-list article { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
+.cabling-module .history-list p { margin: 4px 0 0; }
+.cabling-module .history-list strong { flex-shrink: 0; }
+.cabling-module .setting-row { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 16px 0; }
+.cabling-module .setting-row + .setting-row { border-top: 1px solid var(--line); }
+.cabling-module .setting-row small { display: block; margin-top: 4px; }
+.cabling-module .notice { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 16px; margin-bottom: 20px; border: 1px solid #b6d5c3; border-radius: 6px; background: #e9f5ec; }
+.cabling-module .notice.warning { display: block; background: #fff4e1; border-color: #dfc28f; }
+.cabling-module .notice.warning .actions { margin-top: 12px; }
+.cabling-module .footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.cabling-module .confirm-dialog { width: min(92vw, 480px); padding: 28px; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 20px 80px #0a291c33; }
+.cabling-module .confirm-dialog::backdrop { background: #0b221d66; }
+.cabling-module .confirm-dialog .actions { margin-top: 24px; justify-content: flex-end; }
+.cabling-module .danger-button { background: #a53b30; color: white; border-color: #a53b30; }
+.cabling-module .danger-button:hover:not(:disabled) { background: #863026; color: white; }
+.cabling-module .fatal { padding: 40px; }
+.cabling-module .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.cabling-module .skip-link { position: absolute; top: -100px; left: 16px; z-index: 100; padding: 8px 16px; background: white; }
+.cabling-module .skip-link:focus { top: 8px; }
+.cabling-module .reduced-motion *, .cabling-module .reduced-motion *::before, .cabling-module .reduced-motion *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+@media (prefers-reduced-motion: reduce) { .cabling-module *, .cabling-module *::before, .cabling-module *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+@media (max-width: 1100px) {
+  .cabling-module .main-content { padding: 24px; }
+  .cabling-module .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cabling-module .wire-palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cabling-module .connector-pair { grid-template-columns: 1fr; gap: 24px; }
+  .cabling-module .connector-pair .connector { width: min(100%, 500px); margin-inline: auto; }
+  .cabling-module .wire-legend { grid-template-columns: repeat(2, 1fr); }
+  .cabling-module .training-choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cabling-module .hero-illustration { min-width: 150px; padding: 12px; }
+}
+@media (max-width: 800px) {
+  .cabling-module .shell { display: block; }
+  .cabling-module .sidebar { position: static; height: auto; padding: 14px 16px 10px; }
+  .cabling-module .brand { font-size: 19px; }
+  .cabling-module .brand-mark { width: 30px; height: 30px; }
+  .cabling-module .aside-sub { margin: 6px 0 10px; }
+  .cabling-module .sidebar-note { display: none; }
+  .cabling-module .series-link { margin-top: 8px; }
+  .cabling-module .sidebar nav { display: flex; gap: 4px; overflow-x: auto; padding-bottom: 4px; }
+  .cabling-module .nav-button { flex: 0 0 auto; width: auto; padding: 8px 12px; gap: 7px; font-size: 12px; white-space: nowrap; }
+  .cabling-module .nav-button svg { width: 17px; height: 17px; }
+  .cabling-module .main-content { padding: 20px; }
+  .cabling-module .connector-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 600px) {
+  .cabling-module .main-content { padding: 20px 14px 28px; }
+  .cabling-module .page-header { margin-bottom: 20px; padding-bottom: 16px; }
+  .cabling-module h1 { font-size: 23px; } .cabling-module h2 { font-size: 19px; }
+  .cabling-module .hero { padding: 24px; }
+  .cabling-module .hero h2 { font-size: 30px; }
+  .cabling-module .hero-illustration { display: none; }
+  .cabling-module .metrics { gap: 8px; }
+  .cabling-module .metric { padding: 14px 12px; }
+  .cabling-module .metric small { font-size: 11px; }
+  .cabling-module .metric strong { font-size: 25px; }
+  .cabling-module .course-grid { grid-template-columns: 1fr; }
+  .cabling-module .course-card { position: relative; padding: 20px; }
+  .cabling-module .course-card .course-number { position: absolute; top: 18px; right: 20px; }
+  .cabling-module .course-card h3 { margin-top: 0; }
+  .cabling-module .content-panel, .cabling-module .question-panel, .cabling-module .split-panel, .cabling-module .question-row { padding: 18px 14px; }
+  .cabling-module .section-heading, .cabling-module .split-panel { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .cabling-module .section-heading .text-button { align-self: flex-start; }
+  .cabling-module .connector-pair, .cabling-module .map-grid { grid-template-columns: 1fr; gap: 24px; }
+  .cabling-module .pin-row { gap: 2px; }
+  .cabling-module .plug-body { padding: 8px 5px 10px; }
+  .cabling-module .pin-cell { padding-inline: 0; }
+  .cabling-module .wire-label.compact { font-size: 11px; }
+  .cabling-module .wire-palette .wire-label { gap: 6px; font-size: 12px; }
+  .cabling-module .wire-palette button { padding: 8px; }
+  .cabling-module .wire-legend { gap: 10px; padding: 12px; }
+  .cabling-module .wire-legend .wire-label { font-size: 12px; gap: 6px; }
+  .cabling-module .orientation { font-size: 10px; }
+  .cabling-module .question-actions { align-items: stretch; flex-direction: column; gap: 8px; }
+  .cabling-module .answer-types { gap: 8px; }
+  .cabling-module .training-choices button { font-size: 12px; padding-inline: 5px; }
+  .cabling-module .kind-stats { grid-template-columns: 1fr; }
+  .cabling-module .activity-chart { gap: 4px; }
+  .cabling-module .chart-day > span, .cabling-module .chart-day > small { font-size: 11px; }
+  .cabling-module .bar-space { height: 100px; }
+  .cabling-module .session-banner { align-items: stretch; flex-direction: column; }
+  .cabling-module .result-overview { gap: 20px; }
+  .cabling-module .result-overview > strong { font-size: 48px; }
+  .cabling-module .result-list summary, .cabling-module .practical-records summary { flex-wrap: wrap; gap: 6px; }
+  .cabling-module .footer { flex-direction: column; gap: 4px; }
+  .cabling-module .note { padding: 10px 12px; }
+  .cabling-module .checklist label { padding: 12px; gap: 8px; font-size: 13px; }
+}

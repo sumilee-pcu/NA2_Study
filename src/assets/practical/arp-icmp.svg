@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" role="img" aria-labelledby="title desc">
+  <title id="title">ARP의 주소 해석과 ICMP의 메시지 구분</title>
+  <desc id="desc">ARP는 같은 Ethernet 링크의 IPv4 이웃에 대응하는 MAC 주소를 알아냅니다. 요청은 링크 전체에 브로드캐스트하고 대상은 자신의 MAC 주소를 요청자에게 응답합니다. 별도로 ICMPv4 Echo Request와 Echo Reply는 요청과 응답이고, 목적지로 전달하지 못한 라우터가 송신지에 Destination Unreachable을 보고하는 경우도 있습니다. 이들은 별개의 동작 예이며 ICMP 응답이나 오류 보고의 도착이 보장되는 것은 아닙니다.</desc>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8" fill="#087a61"/></marker></defs>
+  <rect width="760" height="520" fill="#fff"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, system-ui, sans-serif" fill="#192d33">
+    <text x="32" y="47" font-size="29" font-weight="700" fill="#103b37">ARP와 ICMP를 구분하기</text>
+    <text x="32" y="80" font-size="20" fill="#536b70">주소 해석, Echo 응답, 오류 보고는 서로 다른 동작입니다.</text>
+    <rect x="32" y="96" width="696" height="128" rx="8" fill="#e7f3ec" stroke="#dce4df" stroke-width="1.5"/>
+    <text x="48" y="123" font-size="22" font-weight="700" fill="#103b37">ARP · 같은 링크에서 IPv4 주소 → MAC 주소</text>
+    <rect x="48" y="142" width="104" height="66" rx="6" fill="#fff" stroke="#dce4df"/>
+    <rect x="608" y="142" width="104" height="66" rx="6" fill="#fff" stroke="#dce4df"/>
+    <text x="100" y="181" font-size="20" font-weight="700" text-anchor="middle">호스트 A</text>
+    <text x="660" y="181" font-size="20" font-weight="700" text-anchor="middle">대상 B</text>
+    <text x="380" y="151" font-size="18" text-anchor="middle" fill="#087a61">요청 · 같은 링크 전체에 브로드캐스트</text>
+    <path d="M164 162 H596" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="380" y="190" font-size="18" text-anchor="middle" fill="#087a61">응답 · B의 MAC 주소를 A에게 전달</text>
+    <path d="M596 201 H164" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <rect x="32" y="236" width="696" height="112" rx="8" fill="#f3f5f2" stroke="#dce4df" stroke-width="1.5"/>
+    <text x="48" y="263" font-size="22" font-weight="700" fill="#103b37">ICMPv4 · Echo 요청과 응답</text>
+    <rect x="48" y="278" width="104" height="56" rx="6" fill="#fff" stroke="#dce4df"/>
+    <rect x="608" y="278" width="104" height="56" rx="6" fill="#fff" stroke="#dce4df"/>
+    <text x="100" y="313" font-size="20" font-weight="700" text-anchor="middle">호스트 A</text>
+    <text x="660" y="313" font-size="20" font-weight="700" text-anchor="middle">호스트 B</text>
+    <text x="380" y="283" font-size="18" text-anchor="middle" fill="#087a61">Echo Request · 요청</text>
+    <path d="M164 292 H596" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="380" y="320" font-size="18" text-anchor="middle" fill="#087a61">Echo Reply · 응답</text>
+    <path d="M596 330 H164" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <rect x="32" y="360" width="696" height="112" rx="8" fill="#f3f5f2" stroke="#dce4df" stroke-width="1.5"/>
+    <text x="48" y="387" font-size="22" font-weight="700" fill="#103b37">ICMPv4 · 목적지 도달 불가 보고 예</text>
+    <rect x="48" y="402" width="104" height="56" rx="6" fill="#fff" stroke="#dce4df"/>
+    <rect x="608" y="402" width="104" height="56" rx="6" fill="#fff" stroke="#dce4df"/>
+    <text x="100" y="437" font-size="20" font-weight="700" text-anchor="middle">송신지</text>
+    <text x="660" y="437" font-size="20" font-weight="700" text-anchor="middle">라우터</text>
+    <text x="380" y="407" font-size="18" text-anchor="middle" fill="#536b70">원래 IP 데이터그램 · 라우터에서 전달 실패</text>
+    <path d="M164 416 H596" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="380" y="444" font-size="18" text-anchor="middle" fill="#087a61">Destination Unreachable · 오류 보고</text>
+    <path d="M596 454 H164" stroke="#087a61" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <text x="380" y="502" font-size="18" fill="#536b70" text-anchor="middle">ICMP의 응답이나 오류 보고가 항상 도착하는 것은 아닙니다.</text>
+  </g>
+</svg>

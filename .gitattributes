@@ -1,0 +1,4 @@
+# Preserve the exact upstream license bytes, including whitespace and line endings.
+/public/fonts/licenses/* -text -whitespace
+# The generated bank check compares exact serialized bytes on Windows and CI.
+/src/content/practical-questions.json text eol=lf

@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {analyze,snapshot,percent} from '../src/analytics-model.mjs';
+const index=[{id:'q1',subject:'TCP/IP'},{id:'q2',subject:'NOS'}];
+const topics=[{id:'t',title:'이론',checks:[{id:'c'}]}];
+const questions=[{id:'p'}];
+test('empty records have zero coverage, no invented score',()=>{const a=analyze({},index,topics,questions);assert.equal(a.rows[1].coverage,0);assert.equal(a.rows[1].accuracy,null);assert.equal(a.recentAverage,null);assert.equal(a.change,null);});
+test('retries count once for coverage and latest correct resolves wrong list',()=>{const a=analyze({written:{progress:{q1:{attempts:3,correct:1,lastCorrect:true}}},practical:{attempts:[{questionId:'p',status:'incorrect'},{questionId:'p',status:'correct'}]}},index,topics,questions);assert.equal(a.rows[1].coverage,50);assert.equal(a.rows[1].mastery,50);assert.equal(a.subjects[0].accuracy,33);assert.equal(a.wrong.length,0);});
+test('theory wrong and practical unanswered remain in review',()=>{const a=analyze({learning:{checks:{'t/c':{correct:false}}},practical:{attempts:[{questionId:'p',status:'unanswered'}]}},index,topics,questions);assert.equal(a.wrong.length,2);assert.equal(a.rows[2].mastery,0);});
+test('history sorts dates before comparing latest five to previous five',()=>{const history=Array.from({length:10},(_,i)=>({date:new Date(2026,0,i+1).toISOString(),total:10,correct:i<5?4:8})).reverse();const a=analyze({written:{history}},index,topics,questions);assert.equal(a.recentAverage,80);assert.equal(a.change,40);});
+test('broken storage is reported and never overwritten',()=>{let writes=0;const result=snapshot({getItem:()=>'{',setItem:()=>writes++});assert.equal(result.warnings.length,5);assert.equal(writes,0);assert.equal(percent(0,0),null);});

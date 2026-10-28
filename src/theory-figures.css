@@ -1,0 +1,24 @@
+.theory-preview{height:164px;margin:0 0 20px;padding:8px;background:#fff;border:1px solid var(--hub-line);border-radius:6px;overflow:hidden}
+.theory-preview img{display:block;width:100%;height:100%;object-fit:contain}
+.theory-figure{margin:24px 0 30px;border:1px solid var(--hub-line);border-radius:9px;background:#fff;overflow:hidden}
+.theory-figure-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;border-bottom:1px solid var(--hub-line)}
+.theory-figure-heading h3{margin:0;font-size:17px;line-height:1.6}
+.theory-figure-heading .hub-button{flex-shrink:0;min-height:44px;padding:8px 12px}
+.theory-figure-image{display:block;width:100%;height:auto;max-height:620px;object-fit:contain}
+.theory-figure figcaption{padding:16px 20px;background:#f6f9f7;font-size:13px;line-height:1.85;border-top:1px solid var(--hub-line)}
+.theory-figure-credit{display:block;color:#526765;font-size:11px;margin-top:8px}
+.theory-reference{margin-top:16px;border:1px solid var(--hub-line);padding:14px 16px;border-radius:6px;background:#fff}
+.theory-reference summary{cursor:pointer;font-size:13px;line-height:1.8;color:var(--hub-navy)}
+.hub-source-list .theory-reference p{font-size:12px;color:#526765;line-height:1.8}
+.theory-dialog{width:min(1120px,96vw);max-width:96vw;max-height:94dvh;padding:0;border:1px solid var(--hub-line);border-radius:10px;color:var(--hub-navy);overflow:auto}
+.theory-dialog::backdrop{background:rgb(16 37 35 / .74)}
+.theory-dialog-toolbar{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;padding:16px 20px;border-bottom:1px solid var(--hub-line);z-index:1}
+.theory-dialog-toolbar h2{font-size:20px;margin:0;line-height:1.6}
+.theory-dialog-toolbar>div{display:flex;gap:8px;flex-shrink:0}
+.theory-dialog-image{overflow:auto;max-height:65dvh;background:#fff;outline-offset:-3px}
+.theory-dialog-image img{display:block;width:100%;height:auto;max-height:65dvh;object-fit:contain;margin:auto}
+.theory-dialog-image.is-zoomed img{width:1200px;max-width:none;max-height:none;margin:0}
+.theory-dialog>p{padding:16px 20px;margin:0;background:#f6f9f7;font-size:14px;line-height:1.8}
+.theory-dialog button{min-height:44px}
+@media(max-width:720px){.theory-preview{height:180px}.theory-figure-heading{padding:12px;gap:8px}.theory-figure-heading h3{font-size:15px}.theory-figure figcaption{padding:14px;font-size:13px}.theory-dialog-toolbar{padding:12px;flex-wrap:wrap;gap:8px}.theory-dialog-toolbar h2{font-size:16px;flex-basis:100%}.theory-dialog-toolbar>div{margin-left:auto}.theory-dialog>p{font-size:13px;padding:14px}}
+@media print{.theory-figure{break-inside:avoid}.theory-figure-heading button,.theory-dialog{display:none}.theory-figure-image{max-height:none}.theory-preview{display:none}}
