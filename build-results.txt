@@ -52,13 +52,13 @@ dist/assets/PracticalLabs-1k6cTCxZ.css                  13.45 kB │ gzip:   3.3
 dist/assets/WrittenApp-B9mMT6bH.css                     18.25 kB │ gzip:   4.07 kB
 dist/assets/App-B-GxlLTC.css                            23.64 kB │ gzip:   4.98 kB
 dist/assets/index-xiWerkUT.css                          32.23 kB │ gzip:   6.87 kB
-dist/assets/practical-lab-model-Dyz9rmx_.js              3.15 kB │ gzip:   1.60 kB
-dist/assets/PracticalQuiz-BJOFmugK.js                   18.09 kB │ gzip:   5.64 kB
-dist/assets/PracticalLabs-Dvu_gmPt.js                   26.51 kB │ gzip:   8.88 kB
+dist/assets/practical-lab-model-DFiPqpcW.js              3.15 kB │ gzip:   1.60 kB
+dist/assets/PracticalQuiz-Cyg0RcMk.js                   18.09 kB │ gzip:   5.64 kB
+dist/assets/PracticalLabs-B_NrAqoh.js                   26.51 kB │ gzip:   8.88 kB
 dist/assets/model-BP9sj13h.js                           29.07 kB │ gzip:  10.53 kB
-dist/assets/WrittenApp-CXhu3jVI.js                      31.97 kB │ gzip:  10.95 kB
+dist/assets/WrittenApp-BJDTf7LR.js                      31.97 kB │ gzip:  10.95 kB
 dist/assets/practical-model-DeUNQRSw.js                 35.66 kB │ gzip:  11.16 kB
-dist/assets/App-UuPfioui.js                             46.36 kB │ gzip:  14.28 kB
-dist/assets/Analytics-DIIxQdUz.js                       75.65 kB │ gzip:   8.42 kB
-dist/assets/index-Isi3PXtd.js                          475.81 kB │ gzip: 143.76 kB
-✓ built in 1.67s
+dist/assets/App-kuvV64DW.js                             46.36 kB │ gzip:  14.28 kB
+dist/assets/Analytics-CHTCBXiz.js                       76.24 kB │ gzip:   8.58 kB
+dist/assets/index-CcNZMe90.js                          475.81 kB │ gzip: 143.76 kB
+✓ built in 1.65s

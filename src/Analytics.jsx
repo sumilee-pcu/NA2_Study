@@ -7,7 +7,7 @@ import {gradeLab,validateLabState} from './practical-lab-model.mjs';
 import {validateLearning} from './learning-model.mjs';
 import {prepareBank,validatePractical} from './practical-model.mjs';
 import {validateBackup,stats as cableStats} from './modules/cabling/model.mjs';
-import {snapshot,analyze,percent} from './analytics-model.mjs';
+import {snapshot,analyze,percent,validateWrittenAnalytics} from './analytics-model.mjs';
 import './analytics.css';
 const bank=prepareBank(questions);
 const fmt=v=>v===null?'—':`${v}%`;
@@ -17,7 +17,7 @@ export default function Analytics(){
  const [data,setData]=useState(read);const [filter,setFilter]=useState('전체');const [page,setPage]=useState(1);
  useEffect(()=>{const refresh=()=>setData(read());window.addEventListener('storage',refresh);window.addEventListener('focus',refresh);return()=>{window.removeEventListener('storage',refresh);window.removeEventListener('focus',refresh);};},[]);
  const warnings=[...data.warnings], states={};
- for(const name of ['learning','written','practical','labs','cabling']){const value=data.records[`na2_study_${name}_v1`];if(!value)continue;try{states[name]=name==='learning'?validateLearning(value):name==='practical'?validatePractical(value,bank):name==='labs'?validateLabState(value):name==='cabling'?validateBackup(value):(()=>{if(!value.progress||!Array.isArray(value.history))throw Error();return value;})();}catch{warnings.push(`${name}: 유효하지 않은 기록은 통계에서 제외했습니다.`);}}
+ for(const name of ['learning','written','practical','labs','cabling']){const value=data.records[`na2_study_${name}_v1`];if(!value)continue;try{states[name]=name==='learning'?validateLearning(value):name==='practical'?validatePractical(value,bank):name==='labs'?validateLabState(value):name==='cabling'?validateBackup(value):validateWrittenAnalytics(value);}catch{warnings.push(`${name}: 유효하지 않은 기록은 통계에서 제외했습니다.`);}}
  const result=analyze(states,index,TOPICS,questions.questions);
  const labs=LABS.filter(l=>states.labs?.entries[l.id]?.checked).map(l=>({lab:l,result:gradeLab(l,states.labs.entries[l.id].answers),help:states.labs.entries[l.id].usedSolution}));
  const cable=states.cabling?cableStats(states.cabling):null;
@@ -31,3 +31,4 @@ export default function Analytics(){
  <section className="analytics-panel"><h2>통합 오답 체크</h2><div className="analytics-actions">{['전체','이론','필기','실기'].map(f=><button key={f} aria-pressed={filter===f} onClick={()=>{setFilter(f);setPage(1);}}>{f}</button>)}</div><p>재풀이에서 맞히면 자동으로 해결됩니다. 실기 링크에서는 ‘오답 복습’을 선택하세요.</p>{wrong.slice((current-1)*15,current*15).map(w=><div className="analytics-wrong" key={`${w.area}-${w.id}`}><span>{w.area}</span><a href={w.href}>{w.title}</a><b>다시 풀기 →</b></div>)}{!wrong.length&&<p>이 영역에 남은 오답이 없습니다. 새로운 문제에 도전해 보세요.</p>}<div className="analytics-actions"><button disabled={current<=1} onClick={()=>setPage(current-1)}>이전</button><span>{current} / {pages}</span><button disabled={current>=pages} onClick={()=>setPage(current+1)}>다음</button></div></section>
  <p className="analytics-note">기록은 현재 브라우저·사이트 주소별로 저장됩니다. 브라우저 데이터 삭제 시 사라질 수 있으므로 백업하세요. 전체 내보내기는 보관용이며, 가져오기는 각 영역의 지원 메뉴를 이용하세요. 저장이 중단된 풀이 기록은 해당 학습 화면에서 별도로 백업하세요.</p></div>;
 }
+

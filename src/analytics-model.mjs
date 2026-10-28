@@ -33,3 +33,14 @@ export function analyze({learning={},written={},practical={},cabling={}}, index,
   const average = list=>list.length?Math.round(list.reduce((s,h)=>s+h.score,0)/list.length):null;
   return {rows,wrong,subjects,history,theoryDone,theoryTotal:topics.length,recentAverage:average(recent),change:prior.length?average(recent)-average(prior):null,cablingAttempts:(cabling.events||[]).length};
 }
+
+export function validateWrittenAnalytics(value) {
+  if (!value || !value.progress || typeof value.progress !== 'object' || Array.isArray(value.progress) || !Array.isArray(value.history)) throw Error('Invalid written records');
+  for (const p of Object.values(value.progress)) {
+    if (!p || !Number.isInteger(p.attempts) || p.attempts < 0 || !Number.isInteger(p.correct) || p.correct < 0 || p.correct > p.attempts || typeof p.lastCorrect !== 'boolean') throw Error('Invalid written score');
+  }
+  for (const h of value.history) {
+    if (!h || !Number.isInteger(h.total) || h.total <= 0 || !Number.isInteger(h.correct) || h.correct < 0 || h.correct > h.total || typeof h.date !== 'string' || !Number.isFinite(Date.parse(h.date)) || typeof h.title !== 'string') throw Error('Invalid written history');
+  }
+  return value;
+}
